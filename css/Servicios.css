@@ -1,0 +1,79 @@
+body {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
+}
+.encabezado{
+    align-items: center;
+    border-bottom: 2px solid black;
+    border-bottom-color: black;
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2000;
+    min-width: 1100px;
+}
+
+.encabezado_incio{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    min-width: 50%;
+}
+
+
+.container {
+    position: relative;
+    height: 400px;
+    width: 1200px;
+    top: 10px;
+    left: calc(38% - 300px);
+    display: flex;
+  }
+  
+  .card {
+    display: flex;
+    height: 380px;
+    width: 880px;
+    background-color: #3f3f3f;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem rgb(10, 75, 83);
+    transition: 0.4s ease-out;
+    position: center;
+    top: 0px;
+  }
+  
+  .card2{
+    display: flex;
+    height: 380px;
+    width: 880px;
+    background-color: #292929;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem rgb(10, 75, 83);
+    transition: 0.4s ease-out;
+    position: center;
+    left: 0px;
+    top: 0px;
+  }
+
+  .card3{
+    display: flex;
+    height: 380px;
+    width: 880px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: -1rem 0 3rem rgb(10, 75, 83);
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+    top: 0px;
+  }
+
+  .title {
+    color: white;
+    font-weight: 300;
+    position: relative;
+    left: 20px;
+    top: 15px;
+  }
