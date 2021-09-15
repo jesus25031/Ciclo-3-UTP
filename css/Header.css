@@ -11,7 +11,7 @@ body {
 /* Encabezados */
 .encabezado_logo { 
     grid-area: logo; 
-    padding-left: 31px;
+    padding-left: 32px;
 }
 
 .encabezado_botones_Inicio { 
