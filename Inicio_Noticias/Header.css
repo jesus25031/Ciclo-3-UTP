@@ -1,44 +1,43 @@
-body {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 0px;
-    font-family: sans-serif;
-}
-
 /* ENCABEZADO */
 
 /* Encabezados */
 .encabezado_logo { 
     grid-area: logo; 
     padding-left: 30px;
+    height: 50px;
 }
 
 .encabezado_botones_Inicio { 
     grid-area: inicio;
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Servicio { 
     grid-area: servicio; 
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Noticias { 
     grid-area: noticias; 
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Grupo {
     grid-area: grupo;
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Contacto {
     grid-area: contacto;
+    height: 53px;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -56,6 +55,7 @@ body {
     grid-gap: 10px;
     height: 50px;
     border-bottom: 2px solid black;
+    
   }
   
   .encabezado > div {
@@ -71,7 +71,7 @@ body {
 }
 
 .boton_inicio{
-    background-color: transparent;
+    background-color:transparent;
     border: none;
     color: black;
     padding: 15px 32px;
@@ -82,6 +82,10 @@ body {
     font-weight: bold;
     height: 50px;
     cursor: pointer;
+}
+
+.boton_inicio:hover{
+    border-bottom: 2px solid cyan; 
 }
 
 .boton_servicio{
@@ -98,10 +102,16 @@ body {
     cursor: pointer;
 }
 
+.boton_servicio:hover{
+    border-bottom: 2px solid cyan; 
+}
+
 .boton_noticias{
-    background-color: transparent;
+    background-color: rgb(203,220,247);
     border: none;
-    border-bottom: 5px solid cyan; 
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 2px solid black;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -127,6 +137,10 @@ body {
     cursor: pointer;
 }
 
+.boton_grupo:hover{
+    border-bottom: 2px solid cyan; 
+}
+
 .boton_contacto{
     background-color: transparent;
     border: none;
@@ -140,10 +154,14 @@ body {
     height: 50px;
     cursor: pointer;
 }
+.boton_contacto:hover{
+    border-bottom: 2px solid cyan; 
+}
 
 .boton_entrar{
     display: inline-block;
-    background-color:black;
+    background: -prefix-linear-gradient(left bottom white, black 95%);
+    background: linear-gradient(to top right,white, black 95%);
     color: white;
     font-size: 17px;
     border: 2px;
@@ -153,7 +171,12 @@ body {
     height: 20px;
     width: 80px;
     cursor: pointer;
+    
 
+}
+
+.boton_entrar:hover{
+    font-weight: bold;
 }
 
 

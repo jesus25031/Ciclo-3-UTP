@@ -1,34 +1,38 @@
-.noticia_1 { 
-    grid-area: imagen;
-    display: block;
-    background-image: url("https://image.freepik.com/vector-gratis/ilustracion-concepto-hoja-calculo_114360-745.jpg");
-    background-repeat: no-repeat;
-    width: 70%;
-    border-bottom-left-radius: 20px;
-    border-top-left-radius: 20px;
-    box-shadow:5px 0px 5px 0px grey;
-}
-
-.texto_noticia_1{
-    grid-area: noticias;
-    background-color: blue;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 20px;
-    text-align: justify;
-    text-justify: inter-word;
-    width: 30%;
+.cajon_noticias{
+    margin-top: 50px;
+    height: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .content_noticias{
-    margin-top: 30px;
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color:white;    
     display: grid;
-    grid:
-    'imagen imagen noticias'
-    'imagen imagen noticias'
-    'imagen imagen noticias';
-    grid-gap: 20px;
+    grid-template-columns: 55% 45%;
+    margin-top: 50px;
+    border-radius: 10px ;
     height: 500px;
+    width: auto;
+    background-color: rgb(203,220,247);
+}
+
+.noticia_1{
+    display: block;
+    height: 100%;
+    padding-right: 0px;
+}
+
+.imagen_noticia_1{
+    display: block;
+    height: 500px;
+    width: 90%;
+    border-radius: 10px;
+    box-shadow: black 20px 10px 20px;
+
+}
+
+.texto_noticia_1{
+    margin-left: 5px;
+    margin-right: 10px;
+    text-align: justify;
+    
 }
