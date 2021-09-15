@@ -1,10 +1,9 @@
 body {
-    height: 2160px;
+    height: auto;
     width: 1040px;
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 0px;
     font-family: sans-serif;
-    background: -prefix-linear-gradient(top, rgb(132,173,234), white 90%);
-    background: linear-gradient(to bottom,rgb(132,173,234), white 90%);
+    background-color: white;
 }
