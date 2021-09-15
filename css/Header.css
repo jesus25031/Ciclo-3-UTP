@@ -3,6 +3,7 @@ body {
     margin-right: 100px;
     margin-top: 0px;
     font-family: sans-serif;
+    
 }
 
 /* ENCABEZADO */
@@ -55,7 +56,11 @@ body {
     'logo inicio servicio noticias grupo contacto entrar entrar';
     grid-gap: 10px;
     height: 65px;
-    border-bottom: 2px solid black;
+    border-bottom: 8px solid black;
+    box-shadow: -1rem 0 3rem rgb(52, 41, 95);
+    border-radius: 15px;
+    background-color: rgb(245, 243, 243);
+    
   }
   
   .encabezado > div {
