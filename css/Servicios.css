@@ -74,7 +74,7 @@ body {
   .title {
     color: white;
     letter-spacing: 0.01em;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 0%;
     position: center;
     justify-content: center;
@@ -118,11 +118,31 @@ body {
   }
 
   .mas{
-    margin-top: 70px;
+    margin-top: 30px;
+
     
   }
 
   .mas a{
-   color: red;
+   color: hotpink;
+   
     
   }
+
+  .mas a:visited {
+    color: hotpink;
+  }
+
+  .mas a:hover {
+    color: white;
+  }
+
+  .logoIM{
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+  }
+  
+
+
+  

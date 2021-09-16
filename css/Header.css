@@ -11,35 +11,41 @@ body {
 /* Encabezados */
 .encabezado_logo { 
     grid-area: logo; 
-    padding-left: 32px;
+    padding-left: 30px;
+    height: 50px;
 }
 
 .encabezado_botones_Inicio { 
     grid-area: inicio;
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Servicio { 
     grid-area: servicio; 
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Noticias { 
     grid-area: noticias; 
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Grupo {
     grid-area: grupo;
+    height: 53px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .encabezado_botones_Contacto {
     grid-area: contacto;
+    height: 53px;
     margin-left: auto;
     margin-right: auto; 
 }
@@ -51,12 +57,13 @@ body {
 }
 
 .encabezado {
+    margin-top: 10px;
     display: grid;
     grid:
     'logo inicio servicio noticias grupo contacto entrar entrar';
     grid-gap: 10px;
-    height: 65px;
-    border-bottom: 8px solid black;
+    height: 50px;
+    border-bottom: 5px solid rgb(0,0,0);
     box-shadow: -1rem 0 3rem rgb(52, 41, 95);
     border-radius: 15px;
     background-color: rgb(245, 243, 243);
@@ -85,13 +92,18 @@ body {
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
-    height: 10px;
-    cursor: pointer;
+    height: 50px;
+}
+
+.boton_inicio:hover{
+    border-bottom: 2px solid cyan; 
 }
 
 .boton_servicio{
-    background-color: transparent;
-    border-bottom: 5px solid cyan; 
+    
+    background-color: rgb(203,220,247);
+    border-bottom: 2px solid cyan;
+    border: none;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -99,13 +111,19 @@ body {
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
-    height: 10px;
-    cursor: pointer;
+    height: 50px;
+}
+
+.boton_servicio:hover{
+    border-bottom: 2px solid cyan; 
 }
 
 .boton_noticias{
     background-color: transparent;
-    border: none; 
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 2px solid black;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -113,10 +131,13 @@ body {
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
-    height: 10px;
-    cursor: pointer;
+    height: 50px;
 }
 
+.boton_noticias:hover{
+    font-size: 18px;
+    border-bottom: 2px solid cyan;
+}
 .boton_grupo{
     background-color: transparent;
     border: none;
@@ -127,8 +148,11 @@ body {
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
-    height: 10px;
-    cursor: pointer;
+    height: 50px;
+}
+
+.boton_grupo:hover{
+    border-bottom: 2px solid cyan; 
 }
 
 .boton_contacto{
@@ -141,14 +165,16 @@ body {
     display: inline-block;
     font-size: 17px;
     font-weight: bold;
-    height: 10px;
-    cursor: pointer;
+    height: 50px;
+}
+.boton_contacto:hover{
+    border-bottom: 2px solid cyan; 
 }
 
 .boton_entrar{
     display: inline-block;
-    background-color:black;
-    color: white;
+    background: -prefix-linear-gradient(left bottom white, black 95%);
+    background: linear-gradient(to top right,white, black 95%);
     font-size: 17px;
     border: 2px;
     border-radius: 50px;
@@ -156,10 +182,37 @@ body {
     text-decoration: none; 
     height: 20px;
     width: 80px;
-    cursor: pointer;
+    font-weight: bold;
+}
 
-    
+.boton_entrar:hover{
+    height: 22px;
+    width: 82px;
+}
 
+.boton_inicio >  a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+.boton_servicio > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_noticias > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_grupo > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_contacto > a:link, a:hover{
+    text-decoration: none;
+    color: black;
+}
+.boton_entrar > a:link{
+    text-decoration: none;
+    color: white;
 }
 
 
