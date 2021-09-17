@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="Css/Body.css">
     <link rel="stylesheet" type="text/css" href="Css/Header.css">
     <link rel="stylesheet" type="text/css" href="Css/SeccionNoticias.css">
-    <title>AppInventarios</title>
+    <title>AppVentarios</title>
 </head>
 <body>
     
@@ -49,43 +49,76 @@
         </div>
     </nav>
 
-    <div class = "cajon_noticias">
-        <!-- <div>One</div>
-        <div>Two</div> -->
+    <div id= "noticias_del_dia"class = "cajon_noticias">
+        <h2  class= "noticias_del_dia">Noticias del día</h2>
         <div class = "content_noticias">
-            <div class = "noticia_1">
-                <img class = "imagen_noticia_1" src = "Recursos/Noticia1.jpg">
+            <div  class = "noticia_1">
+                <img class = "imagen_noticia" src = "Recursos/Noticia1.jpg">
             </div>
-            <div class = "texto_noticia_1">
-                <p>Gran Inauguración</p>
-                <p>Excepteur nulla adipisicing culpa mollit sunt Lorem. Non et velit adipisicing ullamco ex laborum officia nisi pariatur sunt et. Deserunt eiusmod adipisicing laborum veniam elit irure mollit cillum sunt eu nostrud cillum. Amet velit aliqua adipisicing cillum cupidatat sint reprehenderit laboris est. Laboris non ut commodo commodo minim ex excepteur do minim ea officia aliquip ad et.
-                </p>
-                <a href="https://www.freepik.es/vectores/tiempo">Vector de Tiempo creado por stories - www.freepik.es</a>
+            <div class = "texto_noticia">
+                <Div class="texto_noticia_Titulo">
+                    <h3>Gran Inauguración</h3>
+                </Div>
+                <div class="texto_noticia_info">
+                    <h4> Prepárate</h4>
+                    <p> 
+                        ¡¡Este 10 de octubre se lanzará la version beta de nuestra página web. !!
+                    </p>      
+                    <p>
+                        AppVentarios se diseño con el fin de agilizar y administrar los inventarios dentro de una pyme. 
+                    </p>
+                    <p>
+                        - Es importante que tengas el control de tus inventarios para no generar inconvenientes o tener imprevistos en los registros financieros (Gastos, costos, consumo). 
+                    </p>
+                    <p>
+                        - Lleva la trazabilidad de tus gastos, de los costos y del consumo de tus productos.
+                    </p>
+                    <p> 
+                        - Ten tus Inventarios actualizados en tiempo real y mira la actividad que se ha hecho en tu tienda.
+                    </p>
+                </div>
+                <div class="texto_noticia_interacción">
+                    <img  id="unlike" onclick="changeImage()" src = "Recursos/Icon_unlike.png"></img>
+                </div>
+                <div class="texto_noticia_reconocimiento">
+                    <a id="link" href="https://www.freepik.es/vectores/tiempo">Vector de Tiempo creado por stories - www.freepik.es</a>
+                </div>
+                
             </div>
         </div>
-        <div class = "content_noticias">
-            <div class = "noticia_1">
-                <img class = "imagen_noticia_1" src = "Recursos/Noticia1.jpg">
+        <div class="Noticias_mes">
+            <div class="div1"> 
+                <p>Noticias del mes de Septiembre</p>
             </div>
-            <div class = "texto_noticia_1">
-                <p>Gran Inauguración</p>
-                <p>Excepteur nulla adipisicing culpa mollit sunt Lorem. Non et velit adipisicing ullamco ex laborum officia nisi pariatur sunt et. Deserunt eiusmod adipisicing laborum veniam elit irure mollit cillum sunt eu nostrud cillum. Amet velit aliqua adipisicing cillum cupidatat sint reprehenderit laboris est. Laboris non ut commodo commodo minim ex excepteur do minim ea officia aliquip ad et.
+            <div class="div2">
+                <img  src = "Recursos/Noticia1.jpg">
+                
+            </div>
+            <div class="div3"> 
+                <p>
+                    <a id="noticias_mes_link1"href="#noticias_del_dia">Gran Inauguración</a>
                 </p>
-                <a href="https://www.freepik.es/vectores/tiempo">Vector de Tiempo creado por stories - www.freepik.es</a>
             </div>
-        </div>
-        <div class = "content_noticias">
-            <div class = "noticia_1">
-                <img class = "imagen_noticia_1" src = "Recursos/Noticia1.jpg">
+            <div class="div4">
+                <p></p>
             </div>
-            <div class = "texto_noticia_1">
-                <p>Gran Inauguración</p>
-                <p>Excepteur nulla adipisicing culpa mollit sunt Lorem. Non et velit adipisicing ullamco ex laborum officia nisi pariatur sunt et. Deserunt eiusmod adipisicing laborum veniam elit irure mollit cillum sunt eu nostrud cillum. Amet velit aliqua adipisicing cillum cupidatat sint reprehenderit laboris est. Laboris non ut commodo commodo minim ex excepteur do minim ea officia aliquip ad et.
-                </p>
-                <a href="https://www.freepik.es/vectores/tiempo">Vector de Tiempo creado por stories - www.freepik.es</a>
+            <div class="div5">
+    
             </div>
+            <div class="div6">
+    
+            </div>
+            <div class="div7">
+    
+            </div>
+            <div class="div8">
+    
+            </div>
+    
         </div>
     </div>
+
+    
     
 </body>
 <script src = "Javascript/Noticias.js"></script>
