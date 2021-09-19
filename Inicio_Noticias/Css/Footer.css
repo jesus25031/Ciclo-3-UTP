@@ -1,0 +1,19 @@
+.footer{
+    height: auto;
+    background-color: rgb(203,220,247);
+    clear:both;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.section-textF{
+    margin: 0;
+    color: #3e3e3e;
+    background: rgb(203,220,247);
+    font-weight: bold;
+    text-align: center;
+    border: 1px;
+    
+}

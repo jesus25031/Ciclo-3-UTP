@@ -2,59 +2,47 @@
 
 /* Encabezados */
 .encabezado_logo { 
-    grid-area: logo; 
     padding-left: 30px;
-    height: 50px;
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 .encabezado_botones_Inicio { 
-    grid-area: inicio;
-    height: 53px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-area: 1 / 2 / 2 / 3;
+    text-align:center;
 }
 
 .encabezado_botones_Servicio { 
-    grid-area: servicio; 
-    height: 53px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-area: 1 / 3 / 2 / 4;
+    text-align:center;
 }
 
 .encabezado_botones_Noticias { 
-    grid-area: noticias; 
-    height: 53px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-area: 1 / 4 / 2 / 5;
+    text-align:center;
 }
 
 .encabezado_botones_Grupo {
-    grid-area: grupo;
-    height: 53px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-area: 1 / 5 / 2 / 6;
+    text-align:center;
 }
 
 .encabezado_botones_Contacto {
-    grid-area: contacto;
-    height: 53px;
-    margin-left: auto;
-    margin-right: auto; 
+    grid-area: 1 / 6 / 2 / 7; 
+    text-align:center;
 }
 
 .encabezado_botones_Entrar {
-    grid-area: entrar; 
-    margin-left: auto;
-    margin-right: auto;
+    grid-area: 1 / 7 / 2 / 8; 
+    text-align:center;
 }
 
 .encabezado {
     margin-top: 10px;
     display: grid;
-    grid:
-    'logo inicio servicio noticias grupo contacto entrar entrar';
-    grid-gap: 10px;
-    height: 50px;
+    grid-template-columns: 20% repeat(5, 12%) 20%;
+    grid-template-rows: 50px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
     border-bottom: 5px solid rgb(0,0,0);
     box-shadow: -1rem 0 3rem rgb(52, 41, 95);
     border-radius: 15px;
@@ -74,54 +62,65 @@
     padding-bottom: 10px;
 }
 
-.boton_inicio{
-    background-color: transparent;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
-    font-weight: bold;
-    height: 50px;
-}
-
-.boton_inicio:hover{
-    border-bottom: 2px solid cyan; 
-}
-
 .boton_servicio{
     background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
     border: none;
     color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
     font-weight: bold;
-    height: 50px;
+}
+
+.boton_servicio > a{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .boton_servicio:hover{
     border-bottom: 2px solid cyan; 
 }
 
+.boton_inicio{
+    background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton_inicio > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_inicio:hover{
+    border-bottom: 2px solid cyan; 
+}
+
 .boton_noticias{
     background-color: rgb(203,220,247);
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
     border: none;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    border-bottom: 2px solid black;
     color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
     font-weight: bold;
-    height: 50px;
+}
+
+.boton_noticias > a{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .boton_noticias:hover{
@@ -129,15 +128,19 @@
 }
 .boton_grupo{
     background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
     border: none;
     color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
     font-weight: bold;
-    height: 50px;
+}
+
+.boton_grupo > a{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .boton_grupo:hover{
@@ -146,16 +149,21 @@
 
 .boton_contacto{
     background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
     border: none;
     color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 17px;
     font-weight: bold;
-    height: 50px;
 }
+
+.boton_contacto> a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .boton_contacto:hover{
     border-bottom: 2px solid cyan; 
 }
@@ -164,11 +172,12 @@
     display: inline-block;
     background: -prefix-linear-gradient(left bottom white, black 95%);
     background: linear-gradient(to top right,white, black 95%);
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
     font-size: 17px;
     border: 2px;
     border-radius: 50px;
-    text-align: center;
-    text-decoration: none; 
     height: 20px;
     width: 80px;
     font-weight: bold;
@@ -203,7 +212,4 @@
     text-decoration: none;
     color: white;
 }
-
-
-
 
