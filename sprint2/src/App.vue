@@ -1,5 +1,5 @@
 <template>
-  <div id="app">>
+  <div id="app">
     <CrearCuenta msg="APPVENTARIO"/>
   </div>
 </template>
@@ -22,6 +22,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 5px;
+  margin-right: 400px;
+  margin-left: 450px;
 }
 </style>
