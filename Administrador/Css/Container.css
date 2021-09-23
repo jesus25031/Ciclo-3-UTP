@@ -1,0 +1,53 @@
+.Container{
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 900px;
+    width: auto;
+
+    display: grid;
+    grid-template-columns: 20% 79%;
+    grid-template-rows: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.Seccion-Carpetas{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.cajon-carpetas{
+    background-color: rgb(126, 126, 126);
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 10px;
+    height: 700px;
+    width: auto;
+}
+
+.Seccion-Tabla{
+    grid-area: 1 / 2 / 2 / 3;
+    
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 100px) 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+.Titulo{
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: yellow;
+
+}
+
+.EditarTabla{
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: aqua;
+}
+
+.Tabla{
+    grid-area: 3 / 1 / 4 / 2;
+    background-color: bisque;
+}
