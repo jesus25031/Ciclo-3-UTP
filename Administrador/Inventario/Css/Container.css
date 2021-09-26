@@ -1,0 +1,36 @@
+.Container{
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 900px;
+    width: auto;
+
+    display: grid;
+    grid-template-columns: 20% 79%;
+    grid-template-rows: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.Seccion-Carpetas{
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.cajon-carpetas{
+    /* visibility: hidden; */
+    background-color: rgb(126, 126, 126);
+    margin-top: 1px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    height: 98%;
+    width: auto;
+}
+
+.Seccion-Tabla{
+    grid-area: 1 / 2 / 2 / 3;
+    height: 98%;
+}
+
+

@@ -25,15 +25,10 @@
 .boton-inventario{
     grid-area: 2 / 1 / 3 / 2; 
     margin-top: 10px;
-
-    display: grid;
-    grid-template-columns: 70% repeat(2, 15%);
-    grid-template-rows: 100%;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    width: 100%;
 }
 
-.boton-inventario > button{
+.boton-inventario > div{
     grid-area: 1 / 1 / 2 / 2;
     width: 95% !important; 
     height: 95%;
@@ -58,41 +53,14 @@
 #openFolder > svg{
     margin-top: 12px;
 }
-.boton-inventario > button > p{
+
+.boton-inventario > div{
+    color: black;
+}
+.boton-inventario > div> p{
     grid-area: 1 / 2 / 2 / 3;
     font-weight: bold;
     margin-top: 9px;
-}
-.boton-inventario > button:hover{
-    background-color:rgb(161, 161, 161);
-}
-
-#newFolder{
-    grid-area: 1 / 2 / 2 / 3;
-    color: black;
-    margin-right: 2px;
-    border-radius: 5px;
-}
-#newFolder:hover{
-    background-color:rgb(161, 161, 161);
-}
-#newFolder > svg{
-    margin-top: 12px;
-    margin-left: 10px;
-}
-
-#newFile{
-    grid-area: 1 / 3 / 2 / 4;
-    color: black;
-    margin-right: 2px;
-    border-radius: 5px;
-}
-#newFile > svg{
-    margin-top: 12px;
-    margin-left: 11px;
-}
-#newFile:hover{
-    background-color:rgb(161, 161, 161);
 }
 
 .contenido-inventario{
@@ -101,6 +69,7 @@
     height: 25px;
     color: black;
     font-size: 18px;
+    background-color: rgb(161, 161, 161);
 
     display: grid;
     grid-template-columns: 10% 90%;
