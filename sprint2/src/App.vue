@@ -16,14 +16,8 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 5px;
-  margin-right: 400px;
-  margin-left: 450px;
-}
+
+  @import './assets/styles/CrearCuenta.css';
+  @import "./assets/styles/Header.css";
+  
 </style>

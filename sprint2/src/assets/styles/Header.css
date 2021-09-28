@@ -1,0 +1,240 @@
+
+
+/* ENCABEZADO */
+
+/* Encabezados */
+.Header{
+   width: 10px;
+   margin-left: 85px;
+}
+
+.encabezado_logo { 
+    grid-area: logo; 
+    padding-left: 30px;
+    height: 50px;
+}
+
+.encabezado_botones_Inicio { 
+    grid-area: inicio;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.encabezado_botones_Servicio { 
+    grid-area: servicio; 
+    height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.encabezado_botones_Noticias { 
+    grid-area: noticias; 
+    height: 53px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.encabezado_botones_Grupo {
+    grid-area: grupo;
+    height: 53px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.encabezado_botones_Contacto {
+    grid-area: contacto;
+    height: 53px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.encabezado_botones_Entrar {
+    grid-area: entrar; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.encabezado {
+    margin-top: 10px;
+    display: grid;
+    grid:
+    'logo inicio servicio noticias grupo contacto entrar entrar';
+    grid-gap: 10px;
+    height: 50px;
+    border-bottom: 5px solid rgb(0,0,0);
+    box-shadow: -1rem 0 3rem rgb(52, 41, 95);
+    border-radius: 15px;
+    background-color: rgb(245, 243, 243);
+    
+  }
+  
+  .encabezado > div {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+/* contenido */
+.imagen_logo{
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+.boton_inicio{
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.boton_inicio:hover{
+    border-bottom: 2px solid cyan; 
+}
+
+.boton_servicio{
+    
+    background-color: transparent;
+    border: none;
+    color: black;
+    border-bottom: 2px solid cyan;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.boton_servicio:hover{
+    border-bottom: 2px solid cyan; 
+}
+
+.boton_noticias{
+    background-color: transparent;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 2px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.boton_noticias:hover{
+    font-size: 18px;
+    border-bottom: 2px solid cyan;
+}
+.boton_grupo{
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    height: 50px;
+}
+
+.boton_grupo:hover{
+    border-bottom: 2px solid cyan; 
+}
+
+.boton_contacto{
+    background-color: transparent;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 17px;
+    font-weight: bold;
+    height: 50px;
+}
+.boton_contacto:hover{
+    border-bottom: 2px solid cyan; 
+}
+
+.boton_entrar{
+    display: inline-block;
+    background: -prefix-linear-gradient(left bottom white, black 95%);
+    background: linear-gradient(to top right,white, black 95%);
+    font-size: 17px;
+    border: 2px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none; 
+    height: 20px;
+    width: 80px;
+    font-weight: bold;
+}
+
+.boton_entrar:hover{
+    height: 22px;
+    width: 82px;
+}
+
+.boton_inicio >  a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+.boton_servicio > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_noticias > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_grupo > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_contacto > a:link, a:hover{
+    text-decoration: none;
+    color: black;
+}
+.boton_entrar > a:link{
+    text-decoration: none;
+    color: white;
+}
+
+.encabezado{
+    align-items: center;
+    border-bottom: 2px solid black;
+    border-bottom-color: black;
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    position: relative;
+    z-index: 2000;
+    min-width: 1100px;
+}
+
+.encabezado_incio{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    min-width: 50%;
+}
+
+
+
+

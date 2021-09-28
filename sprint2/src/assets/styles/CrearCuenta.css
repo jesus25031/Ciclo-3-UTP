@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 50px;
+    align-items: center;
+    background-color: #f6f6f6;
+    margin-left: 50px;
+    margin-right: 100px;
+    margin-top: 20px;
+    
+}
+.form-signin {
+    width: 450px;
+    max-width: 600px;
+    margin: center;
+    align-items:baseline;
+    background-color: #ffffff;
+    border-radius: 13px;
+    box-shadow: 0rem 0rem 5rem rgb(97, 201, 233);
+}
+
+.card-body{
+    background-color: #1f1f1f;
+    border-radius: 13px;
+    box-shadow: 0rem 0rem 0rem rgb(24, 114, 187);
+    color: rgb(67, 255, 255);
+}
+    
+label {
+    font-weight: 600;
+}
+
+
+.form-signin {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 15px;
+    margin-right: 400px;
+    margin-left: 450px;
+  }
