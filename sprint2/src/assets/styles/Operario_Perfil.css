@@ -1,0 +1,12 @@
+.row{
+    background:  rgb(19, 16, 16);
+    border-radius: 12px;
+    margin-left: 150px;
+    box-shadow: -1rem 0 5rem rgb(47, 129, 206);
+}
+
+
+.labels {
+    font-size: 11px;
+    color: white;
+}
