@@ -16,21 +16,51 @@ const routes = [
         name: "Servicios",
         component: () => import("../components/Inicio/servicios.vue"),
     },
-    // {
-    //     path: "/login",
-    //     name: "Noticias",
-    //     component: () => import("../components/login"),
-    // },
-    // {
-    //     path: "/login",
-    //     name: "Grupo",
-    //     component: () => import("../components/login"),
-    // },
-    // {
-    //     path: "/login",
-    //     name: "Contacto",
-    //     component: () => import("../components/login"),
-    // },
+    {
+        path: "/noticias",
+        name: "Noticias",
+        component: () => import("../components/Inicio/noticias.vue"),
+    },
+    {
+        path: "/grupo",
+        name: "Grupo",
+        component: () => import("../components/Inicio/grupo.vue"),
+    },
+    {
+        path: "/contacto",
+        name: "Contacto",
+        component: () => import("../components/Inicio/contacto.vue"),
+    },
+    {
+        path: "/login",
+        name: "login",
+        component: () => import("../components/Login/login.vue"),
+    },
+    {
+        path: "/login/recuperarContrasena",
+        name: "login recuperar Contraseña",
+        component: () => import("../components/Login/login-recuperarContr.vue"),
+    },
+    {
+        path: "/admin",
+        name: "Administrador",
+        component: () => import("../components/Administrador/administrador-inventario.vue"),
+    },
+    {
+        path: "/admin/compartir",
+        name: "Admin Compartir",
+        component: () => import("../components/Administrador/administrador-compartir.vue"),
+    },
+    {
+        path: "/admin/vistaOperario",
+        name: "Admin Vista Operario",
+        component: () => import("../components/Administrador/administrador-compartir.vue"),
+    },
+    {
+        path: "/admin/actividad",
+        name: "Admin Actividad",
+        component: () => import("../components/Administrador/administrador-compartir.vue"),
+    },
 
     // //Routes Login
     // {

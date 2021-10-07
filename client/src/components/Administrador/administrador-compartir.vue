@@ -3,33 +3,33 @@
         <header >
             <div class = "encabezado">
                 <div class = "encabezado_logo">
-                    <img class = "imagen_logo" src="../Recursos/Logo.png">
+                    <img class = "imagen_logo" src="../../Recursos/Logo.png">
                 </div>
                 <div class = "encabezado_botones_Inventarios">
-                    <div class = "boton_inventarios">
-                        <a href = "../Inventario/inventarios.html">Inventarios</a>
-                    </div>
+                <div class = "boton_inventarios">
+                     <router-link to="/admin">Inventarios</router-link>
+                </div>
                 </div>
                 <div class = "encabezado_botones_Compartir" >
                     <div class = "boton_compartir">
-                        <a href = "compartir.html">Compartir</a>
+                        <router-link to="/admin/compartir">Compartir</router-link>
                     </div>  
                 </div>
                 <div class = "encabezado_botones_VistaOperario">
                     <div class = "boton_vistaOperario">
-                        <a href = "Subpaginas/Noticias/noticias.html">Vista Operario</a>
+                        <router-link to="/admin/vistaOperario">Vista Operario</router-link>
                     </div> 
                 </div>
                 <div class = "encabezado_botones_Actividad">
                     <div class = "boton_actividad">
-                        <a href = "Subpaginas/Grupo/grupo.html">Actividad</a>
+                        <router-link to="/admin/actividad">Actividad</router-link>
                     </div>
                 </div> 
                 <div class = "encabezado_botones_Salir" >
                     <div class = "boton_salir">
-                        <a href = "Subpaginas/Login/login.html">Salir</a>
+                        <router-link to="/">Salir</router-link>
                     </div>
-                </div>            
+                </div>           
             </div>
         </header> 
         <section class="Container">
@@ -121,11 +121,11 @@
 
 
 <script>
-    import '../Css/administrador-compartir/Body.css'
-    import '../Css/administrador-compartir/Header.css'
-    import '../Css/administrador-compartir/CajonCarpetas.css'
-    import '../Css/administrador-compartir/Container.css'
-    import '../Css/administrador-compartir/Tabla.css'
+    import '../../Css/administrador-compartir/Body.css'
+    import '../../Css/administrador-compartir/Header.css'
+    import '../../Css/administrador-compartir/CajonCarpetas.css'
+    import '../../Css/administrador-compartir/Container.css'
+    import '../../Css/administrador-compartir/Tabla.css'
     //   import axios from "axios";
 
     export default {

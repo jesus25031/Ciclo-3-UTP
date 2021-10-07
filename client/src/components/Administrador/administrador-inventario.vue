@@ -7,27 +7,27 @@
             </div>
             <div class = "encabezado_botones_Inventarios">
                 <div class = "boton_inventarios">
-                    <a href = "inventarios.html">Inventarios</a>
+                     <router-link to="/admin">Inventarios</router-link>
                 </div>
             </div>
             <div class = "encabezado_botones_Compartir" >
                 <div class = "boton_compartir">
-                    <a href = "../Compartir/compartir.html">Compartir</a>
+                     <router-link to="/admin/compartir">Compartir</router-link>
                 </div>  
             </div>
             <div class = "encabezado_botones_VistaOperario">
                 <div class = "boton_vistaOperario">
-                    <a >Vista Operario</a>
+                     <router-link to="/admin/vistaOperario">Vista Operario</router-link>
                 </div> 
             </div>
             <div class = "encabezado_botones_Actividad">
                 <div class = "boton_actividad">
-                    <a href = "Subpaginas/Grupo/grupo.html">Actividad</a>
+                     <router-link to="/admin/actividad">Actividad</router-link>
                 </div>
             </div> 
             <div class = "encabezado_botones_Salir" >
                 <div class = "boton_salir">
-                    <a>Salir</a>
+                     <router-link to="/">Salir</router-link>
                 </div>
             </div>            
         </div>

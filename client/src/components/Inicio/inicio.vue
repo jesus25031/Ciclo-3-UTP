@@ -6,35 +6,35 @@
                     <img class = "imagen_logo" src="../../Recursos/Logo.png">
                 </div>
                 <div class = "encabezado_botones_Inicio">
-                    <div class = "boton_inicio">
-                        <router-link to="/">Inicio</router-link>
-                    </div>
+            <div class = "boton_inicio">
+                <router-link to="/">Inicio</router-link>
+            </div>
+            </div>
+            <div class = "encabezado_botones_Servicio" >
+                <div class = "boton_servicio">
+                    <router-link to="/servicios">Servicios</router-link>
+                </div>  
+            </div>
+            <div class = "encabezado_botones_Noticias">
+                <div class = "boton_noticias">
+                    <router-link to="/noticias">Noticias</router-link>
+                </div> 
+            </div>
+            <div class = "encabezado_botones_Grupo">
+                <div class = "boton_grupo">
+                    <router-link to="/grupo">Grupo</router-link>
                 </div>
-                <div class = "encabezado_botones_Servicio" >
-                    <div class = "boton_servicio">
-                        <router-link to="/servicios">Servicios</router-link>
-                    </div>  
+            </div>
+            <div class = "encabezado_botones_Contacto" >
+                <div class = "boton_contacto">
+                    <router-link to="/contacto">Contacto</router-link>
                 </div>
-                <div class = "encabezado_botones_Noticias">
-                    <div class = "boton_noticias">
-                        <a href = "Subpaginas/Noticias/noticias.html">Noticias</a>
-                    </div> 
+            </div>    
+            <div class = "encabezado_botones_Entrar" >
+                <div class = "boton_entrar">
+                <router-link to="/login">Entrar</router-link>
                 </div>
-                <div class = "encabezado_botones_Grupo">
-                    <div class = "boton_grupo">
-                        <a href = "Subpaginas/Grupo/grupo.html">Grupo</a>
-                    </div>
-                </div>
-                <div class = "encabezado_botones_Contacto" >
-                    <div class = "boton_contacto">
-                        <a href = "Subpaginas/Contacto/contacto.html">Contacto</a>
-                    </div>
-                </div>    
-                <div class = "encabezado_botones_Entrar" >
-                    <div class = "boton_entrar">
-                        <a href = "Subpaginas/Login/login.html">Entrar</a>
-                    </div>
-                </div>            
+            </div>                    
             </div>
         </nav>
 

@@ -2,7 +2,7 @@
     <v-app class="body">
             <form class="seccion-cajon"> 
                 <div class="logo">
-                    <img src="../Recursos/Logo.png">
+                    <img src="../../Recursos/Logo.png">
                 </div>
             <div class="titulo">
                     <h1>Recupera tu cuenta</h1>
@@ -44,8 +44,8 @@
 
 <script>
 
-    import "../Css/login-recuperarContr/Body.css"
-    import "../Css/login-recuperarContr/Cajon_Contenido.css"
+    import "../../Css/login-recuperarContr/Body.css"
+    import "../../Css/login-recuperarContr/Cajon_Contenido.css"
 
     export default {
 
