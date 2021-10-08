@@ -1,0 +1,9 @@
+body {
+    height: auto;
+    width: 1040px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle at 30.13% 46.5%, #644297 0, #39296c 25%, #10103f 50%, #000018 75%, #000000 100%);
+}

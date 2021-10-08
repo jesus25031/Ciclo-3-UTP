@@ -1,0 +1,128 @@
+.Seccion-Tabla{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 100px 81%;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+}
+
+
+.Titulo{
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+    border-bottom: 2px solid black;
+}
+.Titulo > p{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; 
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.EditarTabla{
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+#inputsTabla{   
+    grid-area: 1 / 1 / 2 / 2; 
+    display:flex;
+    align-items:center;
+}
+
+.Filas{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    grid-template-rows: 100%;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.tituloColumnas{
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+    font-weight: bold;
+}
+.tituloColumnas > p{
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.editarColumnas{
+    grid-area: 1 / 2 / 2 / 3;
+}
+.tituloFilas{
+    grid-area: 1 / 1 / 2 / 2;
+    display: table;
+    font-weight: bold;
+}
+.tituloFilas > p{
+    display: table-cell;
+    vertical-align: middle;
+}
+.editarFilas{
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.editarFilas >input{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+.Contenedor-boton{
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+}
+
+.Tabla{
+    grid-area: 3 / 1 / 4 / 2;
+    margin-right: 10px;
+    
+}
+
+th{
+    height: 40px;  
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+
+.inputContenido{
+    background-color: transparent;
+    border: none;
+    color: black;   
+    height: 100%;
+    width: 100%;
+}
+
+.inputContenido:focus{
+    outline-color: rgb(0, 225, 255);
+    outline-width: 1px;
+    outline-style:ridge;
+}
+tbody > tr > th{
+    height: 40px;    
+}
+
+.columna{
+    display:table;
+    width: 98%;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.columna > p{
+    display: table-cell;
+    vertical-align: middle;
+}

@@ -1,0 +1,222 @@
+/* ENCABEZADO */
+
+/* Encabezados */
+.encabezado_logo { 
+    
+    padding-left: 30px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.encabezado_botones_Inicio { 
+    grid-area: 1 / 2 / 2 / 3;
+    text-align:center;
+}
+
+.encabezado_botones_Servicio { 
+    grid-area: 1 / 3 / 2 / 4;
+    text-align:center;
+}
+
+.encabezado_botones_Noticias { 
+    grid-area: 1 / 4 / 2 / 5;
+    text-align:center;
+}
+
+.encabezado_botones_Grupo {
+    grid-area: 1 / 5 / 2 / 6;
+    text-align:center;
+}
+
+.encabezado_botones_Contacto {
+    grid-area: 1 / 6 / 2 / 7; 
+    text-align:center;
+}
+
+.encabezado_botones_Entrar {
+    grid-area: 1 / 7 / 2 / 8; 
+    text-align:center;
+}
+
+.encabezado {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 20% repeat(5, 12%) 20%;
+    grid-template-rows: 50px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border-bottom: 5px solid rgb(255, 255, 255);
+    box-shadow: -1rem 0 3rem rgb(230, 230, 230);
+    border-radius: 15px;
+    background-color: rgba(255, 254, 254, 0);
+    border-bottom: 2px solid rgb(255, 255, 255);
+
+    
+  }
+  
+  .encabezado > div {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+/* contenido */
+.imagen_logo{
+    height: 50px;
+    padding-bottom: 10px;
+}
+
+.boton_noticias{
+    background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.boton_noticias > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_noticias:hover{
+    border-bottom: 4px solid rgb(16, 195, 240); 
+}
+
+.boton_inicio{
+    background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton_inicio > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_inicio:hover{
+    border-bottom: 4px solid rgb(16, 195, 240); 
+}
+
+.boton_servicio{
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: black;
+    font-weight: bold;
+    border-bottom: 4px solid rgb(255, 0, 0); 
+}
+
+.boton_servicio > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_servicio:hover{
+    font-size: 18px;
+}
+.boton_grupo{
+    background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton_grupo > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_grupo:hover{
+    border-bottom: 4px solid rgb(16, 195, 240);   
+}
+
+.boton_contacto{
+    background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton_contacto> a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_contacto:hover{
+    border-bottom: 4px solid rgb(16, 195, 240); 
+}
+
+.boton_entrar{
+    display: inline-block;
+    background: -prefix-linear-gradient(left bottom white, rgb(23, 59, 175) 95%);
+    background: linear-gradient(to top right,white, rgb(145, 11, 11) 95%);
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    font-size: 17px;
+    border: 2px;
+    border-radius: 50px;
+    height: 20px;
+    width: 80px;
+    font-weight: bold;
+}
+
+.boton_entrar:hover{
+    height: 22px;
+    width: 82px;
+    background-color: red;
+}
+
+.boton_inicio >  a:link, a:visited{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.boton_servicio > a:link{
+    text-decoration: none;
+    color: rgb(255, 253, 253);
+}
+.boton_noticias > a:link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.boton_grupo > a:link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.boton_contacto > a:link, a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.boton_entrar > a:link{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+

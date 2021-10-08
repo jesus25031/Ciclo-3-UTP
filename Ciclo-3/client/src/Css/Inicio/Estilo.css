@@ -1,0 +1,43 @@
+body {
+    height: auto;
+    width: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 0px;
+    font-family: sans-serif;
+    background-image: radial-gradient(circle at 30.13% 46.5%, #644297 0, #39296c 25%, #10103f 50%, #000018 75%, #000000 100%);
+    align-items: center;
+}
+
+.card-IMI{
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 15px;
+}
+.main-imagen{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 15px;
+}
+
+.box{
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 15px;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+
+
+
+
+
