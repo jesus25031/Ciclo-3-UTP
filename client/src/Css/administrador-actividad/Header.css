@@ -2,54 +2,47 @@
 
 /* Encabezados */
 .encabezado_logo { 
-    
     padding-left: 30px;
     grid-area: 1 / 1 / 2 / 2;
 }
 
-.encabezado_botones_Inicio { 
+.encabezado_botones_Inventarios { 
     grid-area: 1 / 2 / 2 / 3;
     text-align:center;
 }
 
-.encabezado_botones_Servicio { 
-    grid-area: 1 / 3 / 2 / 4;
+.encabezado_botones_Compartir { 
+    grid-area: 1 / 3 / 2 / 4; 
     text-align:center;
 }
 
-.encabezado_botones_Noticias { 
+.encabezado_botones_VistaOperario { 
     grid-area: 1 / 4 / 2 / 5;
     text-align:center;
 }
 
-.encabezado_botones_Grupo {
+.encabezado_botones_Actividad {
     grid-area: 1 / 5 / 2 / 6;
     text-align:center;
 }
 
-.encabezado_botones_Contacto {
-    grid-area: 1 / 6 / 2 / 7; 
-    text-align:center;
-}
-
-.encabezado_botones_Entrar {
-    grid-area: 1 / 7 / 2 / 8; 
+.encabezado_botones_Salir {
+    grid-area: 1 / 6 / 2 / 7;
     text-align:center;
 }
 
 .encabezado {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: 20% repeat(5, 12%) 20%;
+    grid-template-columns: 250px 120px 110px 110px 110px 250px;
     grid-template-rows: 50px;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    border-bottom: 5px solid rgb(255, 255, 255);
-    box-shadow: -1rem 0 3rem rgb(230, 230, 230);
+    grid-column-gap: 15px;
+    border-bottom: 5px solid rgb(0,0,0);
+    box-shadow: -1rem 0 3rem rgb(52, 41, 95);
     border-radius: 15px;
-    background-color: rgba(255, 254, 254, 0);
-    border-bottom: 2px solid rgb(255, 255, 255);
-
+    margin-left: 95px;
+    margin-right: 200px;
+    background-color: rgb(245, 243, 243);
     
   }
   
@@ -62,31 +55,10 @@
 /* contenido */
 .imagen_logo{
     height: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 
-.boton_noticias{
-    background-color: transparent;
-    display:table;
-    margin:0px auto;
-    margin-bottom: 0px;
-    width: 100px;
-    height: 50px;
-    border: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-}
-
-.boton_noticias > a{
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.boton_noticias:hover{
-    border-bottom: 4px solid rgb(16, 195, 240); 
-}
-
-.boton_inicio{
+.boton_vistaOperario{
     background-color: transparent;
     display:table;
     margin:0px auto;
@@ -98,38 +70,59 @@
     font-weight: bold;
 }
 
-.boton_inicio > a{
+.boton_vistaOperario > a{
     display: table-cell;
     vertical-align: middle;
 }
 
-.boton_inicio:hover{
-    border-bottom: 4px solid rgb(16, 195, 240); 
+.boton_vistaOperario:hover{
+    border-bottom: 2px solid cyan; 
 }
 
-.boton_servicio{
+.boton_compartir{
+    background-color: transparent;
     display:table;
     margin:0px auto;
     margin-bottom: 0px;
     width: 100px;
+    height: 50px;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton_compartir > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_compartir:hover{
+    border-bottom: 2px solid cyan; 
+}
+
+.boton_actividad{
+    background-color: rgb(203,220,247);
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 150px;
     height: 50px;
     border: none;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     color: black;
     font-weight: bold;
-    border-bottom: 4px solid rgb(255, 0, 0); 
 }
 
-.boton_servicio > a{
+.boton_actividad> a{
     display: table-cell;
     vertical-align: middle;
 }
 
-.boton_servicio:hover{
+.boton_actividad:hover{
     font-size: 18px;
 }
-.boton_grupo{
+.boton_inventarios{
     background-color: transparent;
     display:table;
     margin:0px auto;
@@ -141,40 +134,20 @@
     font-weight: bold;
 }
 
-.boton_grupo > a{
+.boton_inventarios > a{
     display: table-cell;
     vertical-align: middle;
 }
 
-.boton_grupo:hover{
-    border-bottom: 4px solid rgb(16, 195, 240);   
+.boton_inventarios:hover{
+    border-bottom: 2px solid cyan; 
 }
 
-.boton_contacto{
-    background-color: transparent;
-    display:table;
-    margin:0px auto;
-    margin-bottom: 0px;
-    width: 100px;
-    height: 50px;
-    border: none;
-    color: black;
-    font-weight: bold;
-}
 
-.boton_contacto> a{
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.boton_contacto:hover{
-    border-bottom: 4px solid rgb(16, 195, 240); 
-}
-
-.boton_entrar{
+.boton_salir{
     display: inline-block;
-    background: -prefix-linear-gradient(left bottom white, rgb(23, 59, 175) 95%);
-    background: linear-gradient(to top right,white, rgb(145, 11, 11) 95%);
+    background: -prefix-linear-gradient(left bottom white, black 95%);
+    background: linear-gradient(to top right,white, black 95%);
     display:table;
     margin:0px auto;
     margin-bottom: 0px;
@@ -184,39 +157,32 @@
     height: 20px;
     width: 80px;
     font-weight: bold;
-}
-
-.boton_entrar:hover{
-    height: 22px;
-    width: 82px;
-    background-color: red;
-}
-
-.boton_inicio >  a:link, a:visited{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.boton_servicio > a:link{
-    text-decoration: none;
-    color: rgb(255, 253, 253);
-}
-.boton_noticias > a:link{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.boton_grupo > a:link{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.boton_contacto > a:link, a:hover{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.boton_entrar > a:link{
-    text-decoration: none;
     color: white;
 }
 
+.boton_salir:hover{
+    height: 22px;
+    width: 82px;
+}
 
+.boton_inventarios >  a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+.boton_compartir > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_vistaOperario > a:link{
+    text-decoration: none;
+    color: black;
+}
+.boton_actividad > a:link{
+    text-decoration: none;
+    color: black;
+}
 
-
+.boton_salir > a:link{
+    text-decoration: none;
+    color: white;
+}

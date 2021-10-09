@@ -1,5 +1,5 @@
 <template>
-    <v-app class="body">
+    <main>
         <form class="seccion-cajon"> 
                 <div class="logo">
                     <img src="../../Recursos/Logo.png">
@@ -11,17 +11,17 @@
                     <p>Escoge tu rol y digita la contraseña</p>
             </div>
             <div class= "boton-administrador">
-                    <v-btn color="primary">Administrador</v-btn>
+                    <v-btn @click="$router.push('/admin')">Administrador</v-btn>
             </div>
             <div class="boton-operario">
-                    <v-btn color="primary">Operario</v-btn>            
+                    <v-btn @click="$router.push('/operario')">Operario</v-btn>            
             </div>  
             <div class="password">
-                    <input type="password" placeholder="Constraseña">
+                    <input type="password" placeholder=" Constraseña">
             </div>  
                
             </form>
-    </v-app>
+    </main>
 </template>
 
 <script>

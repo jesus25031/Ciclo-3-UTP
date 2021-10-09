@@ -1,17 +1,18 @@
 body {
-  height: auto;
-  width: 1040px;
+  height: 1500px;
+  width: auto;
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 0px;
-  font-family: sans-serif;
-  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #000018 75%, #000000 100%);
+    
+ 
+  
 }
 
 .encabezado{
     align-items: center;
-    border-bottom: 2px solid black;
-    border-bottom-color: black;
     display: flex;
     height: 50px;
     justify-content: space-around;
@@ -28,7 +29,7 @@ body {
 }
 
 
-.container {
+.container-cards {
     position: relative;
     height: 400px;
     width: 1200px;
@@ -37,7 +38,7 @@ body {
     display: flex;
   }
   
-  .card {
+  .card-GI {
     display: flex;
     height: auto;
     width: 880px;
@@ -45,11 +46,17 @@ body {
     border-radius: 13px;
     box-shadow: 0rem 0rem 5rem rgb(133, 220, 231);
     transition: 0.4s ease-out;
-    position: center;
+    position: relative;
+    left: 0px;
     top: 0px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    
   }
   
-  .card2{
+  .card-IM{
     display: flex;
     height: auto;
     width: 880px;
@@ -60,9 +67,13 @@ body {
     position: relative;
     left: 0px;
     top: 0px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
   }
 
-  .card3{
+  .card-FU{
     display: flex;
     height: auto;
     width: 880px;
@@ -73,6 +84,10 @@ body {
     position: relative;
     left: 0px;
     top: 0px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
   }
 
   .title {
@@ -85,17 +100,17 @@ body {
     font-size: 25px;
   }
  
-  .card:hover {
+  .card-GI:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out;
   }
 
-  .card2:hover {
+  .card-IM:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out;
   }
 
-  .card3:hover {
+  .card-FU:hover {
     transform: translateY(-20px);
     transition: 0.4s ease-out;
   }
@@ -117,7 +132,7 @@ body {
 
   .cardcont p{
     position: center;
-    color: aqua;
+    color: rgb(177, 255, 229);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
@@ -146,6 +161,8 @@ body {
     height: 80px;
     margin-top: 10px;
   }
+
+
   
 
 

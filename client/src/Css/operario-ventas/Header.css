@@ -1,0 +1,128 @@
+/* ENCABEZADO */
+
+/* Encabezados */
+.encabezado_logo { 
+    padding-left: 30px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.encabezado_botones_vender { 
+    grid-area: 1 / 2 / 2 / 3;
+    text-align:center;
+}
+
+.encabezado_botones_consultar { 
+    grid-area: 1 / 3 / 2 / 4; 
+    text-align:center;
+}
+
+.encabezado_botones_Salir {
+    grid-area:  1 / 4 / 2 / 5;
+    text-align:center;
+}
+
+.encabezado {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 40% 10% 10% 40%;
+    grid-template-rows: 50px;
+    grid-column-gap: 15px;
+    border-bottom: 5px solid rgb(0,0,0);
+    box-shadow: -1rem 0 3rem rgb(52, 41, 95);
+    border-radius: 15px;
+    margin-left: 95px;
+    margin-right: 200px;
+    background-color: rgb(245, 243, 243);
+    
+  }
+  
+  .encabezado > div {
+    display: flex;
+    align-items: center;
+    
+  }
+  
+/* contenido */
+.imagen_logo{
+    height: 50px;
+    padding-bottom: 5px;
+}
+
+
+.boton_consultar{
+    background-color: transparent;
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 100px;
+    height: 50px;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.boton_consultar > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_consultar:hover{
+    border-bottom: 2px solid cyan; 
+}
+
+.boton_vender{
+    background-color: rgb(203,220,247);
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.boton_vender > a{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.boton_vender:hover{
+    font-size: 15px;
+}
+
+.boton_salir{
+    display: inline-block;
+    background: -prefix-linear-gradient(left bottom white, black 95%);
+    background: linear-gradient(to top right,white, black 95%);
+    display:table;
+    margin:0px auto;
+    margin-bottom: 0px;
+    font-size: 17px;
+    border: 2px;
+    border-radius: 50px;
+    height: 20px;
+    width: 80px;
+    font-weight: bold;
+}
+
+.boton_salir:hover{
+    height: 22px;
+    width: 82px;
+}
+
+.boton_vender >  a:link, a:visited{
+    text-decoration: none;
+    color: black;
+}
+.boton_consultar > a:link{
+    text-decoration: none;
+    color: black;
+}
+
+.boton_salir > a:link{
+    text-decoration: none;
+    color: white;
+}

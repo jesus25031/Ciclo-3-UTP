@@ -1,6 +1,6 @@
 <template>
-    <v-app class="body">
-      <nav >
+   <main>
+    <nav >
     <div class = "encabezado">
         <div class = "encabezado_logo">
             <img class = "imagen_logo" src="../../Recursos/Logo.png">
@@ -36,11 +36,11 @@
             </div>
         </div>            
     </div>
-  </nav>
+  </nav><br><br>
 
         
-<div class="container">
-  <div class="card">
+<div class="container-cards">
+  <div class="card-GI">
     <div class="cardcont">
       <a href="#">
         <img class="logoIM" src="../../Recursos/storage.svg" alt="vector Gestion Inventario">
@@ -61,8 +61,8 @@
   </div>
 </div><br><br>
 
-<div class="container">
-    <div class="card2">
+<div class="container-cards">
+    <div class="card-IM">
       <div class="cardcont">
         <a href="#">
           <img class="logoIM" src="../../Recursos/group.svg" alt="vector Interaccion Multiusuario">
@@ -84,8 +84,8 @@
   </div><br><br>
 
 
-<div class="container">
-    <div class="card3">
+<div class="container-cards">
+    <div class="card-FU">
       <div class="cardcont">
         <a href="#">
           <img class="logoIM" src="../../Recursos/tap.svg" alt="vector utilizacion facil de inventario">
@@ -103,10 +103,11 @@
         </div>
       </div>   
     </div>
-</div><br>
+</div>
+</main> 
 
-    </v-app>
 </template>
+
 
 <script>
     import "../../Css/Servicios/Header.css"
@@ -117,3 +118,6 @@
   }
 
 </script>
+
+<style>
+</style>

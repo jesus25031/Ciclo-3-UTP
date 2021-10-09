@@ -37,11 +37,6 @@ const routes = [
         component: () => import("../components/Login/login.vue"),
     },
     {
-        path: "/login/recuperarContrasena",
-        name: "login recuperar Contraseña",
-        component: () => import("../components/Login/login-recuperarContr.vue"),
-    },
-    {
         path: "/admin",
         name: "Administrador",
         component: () => import("../components/Administrador/administrador-inventario.vue"),
@@ -52,51 +47,22 @@ const routes = [
         component: () => import("../components/Administrador/administrador-compartir.vue"),
     },
     {
-        path: "/admin/vistaOperario",
-        name: "Admin Vista Operario",
-        component: () => import("../components/Administrador/administrador-compartir.vue"),
-    },
-    {
         path: "/admin/actividad",
         name: "Admin Actividad",
-        component: () => import("../components/Administrador/administrador-compartir.vue"),
+        component: () => import("../components/Administrador/administrador-actividad.vue"),
     },
 
-    // //Routes Login
-    // {
-    //     path: "/login",
-    //     name: "login",
-    //     component: () => import("../components/login"),
-    // },
-    // {
-    //     path: "/login/recuperarContrasena",
-    //     name: "login-recuperarContraseña",
-    //     component: () => import("../components/login-recuperarContr.vue"),
-    // },
-    // {
-    //     path: "/login_crearCuenta",
-    //     name: "login",
-    //     component: () => import("../components/login"),
-    // },
-
-    // //Routes Admin
-    // {
-    //     path: "/",
-    //     name: "Admin-inventario",
-    //     component: () => import("../components/administrador-inventario"),
-    // },
-    // {
-    //     path: "/admin-compartir",
-    //     name: "admin-compartir",
-    //     component: () => import("../components/administrador-compartir"),
-    // },
-
-    // //Routes Operario
-    // {
-    //     path: "/operario-consultar",
-    //     name: "operario-consultar",
-    //     component: () => import("../components/operario-consultar"),
-    // },
+    {
+        path: "/operario",
+        name: "Operario inicio",
+        component: () => import("../components/Operario/operario-ventas.vue"),
+    },
+    {
+        path: "/operario/consultar",
+        name: "Operario consultar",
+        component: () => import("../components/Operario/operario-consultar.vue"),
+    },
+    
 ];
 
 const router = new VueRouter({

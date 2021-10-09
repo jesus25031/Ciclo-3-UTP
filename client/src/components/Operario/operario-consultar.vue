@@ -7,19 +7,19 @@
                 </div>
                 <div class = "encabezado_botones_vender">
                     <div class = "boton_vender">
-                        <a href = "../Vender/vender.html">Vender</a>
+                        <router-link to="/operario">Vender</router-link>
                     </div>
                 </div>
                 <div class = "encabezado_botones_consultar" >
                     <div class = "boton_consultar">
-                        <a href = "consultar.html">Consultar Inventario</a>
+                        <router-link to="/operario/consultar">Consultar Inventario</router-link>
                     </div>  
                 </div>
                 <div class = "encabezado_botones_Salir" >
                     <div class = "boton_salir">
-                        <a href = "Subpaginas/Login/login.html">Salir</a>
+                         <router-link to="/">Salir</router-link>
                     </div>
-                </div>            
+                </div>              
             </div>
         </header> 
         <section class="Container">
