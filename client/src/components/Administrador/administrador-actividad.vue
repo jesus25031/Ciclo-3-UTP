@@ -84,7 +84,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
+                          <th scope="col"><div class="columna"><p></p></div></th>
+                          <th scope="col"><div class="columna"><p></p></div></th>
+                          <th scope="col"><div class="columna"><p></p></div></th>
+                          <th scope="col"><div class="columna"><p></p></div></th>
+                          <th scope="col"><div class="columna"><p></p></div></th>
+                          <th scope="col"><div class="columna"><p></p></div></th>
+                        </tr>
+                        <tr>
+                           <th scope="col"><div class="columna"><p> </p></div></th>
                           <th scope="col"><div class="columna"><p> </p></div></th>
                           <th scope="col"><div class="columna"><p> </p></div></th>
                           <th scope="col"><div class="columna"><p> </p></div></th>
@@ -115,13 +123,45 @@
     import '../../Css/administrador-actividad/CajonCarpetas.css';
     import '../../Css/administrador-actividad/Container.css';
     import '../../Css/administrador-actividad/Tabla.css';
-    // import axios from "axios";
+    import axios from "axios";
 
     
 
     export default { 
-        
+         created(){
+            this. getoperarioActividad()
+        },  
+        data() {
+            return{
+                actividad:{
+                        user: "demo",
+                        Fecha: {filas_2: "", filas_3: "", fila_4: ""},
+                        Hora: {filas_2: "", filas_3: "", fila_4: ""},
+                        Operario:"demo-Operario",
+                        Producto: {filas_2: "", filas_3: "", fila_4: ""},
+                        Cantidad: {filas_2: "", filas_3: "", fila_4: ""},
+                        Total: {filas_2: "", filas_3: "", fila_4: ""},
+                }
 
+            }
+
+        },
+        methods:{
+                getoperarioActividad(){  
+                    console.log("Cargando datos");
+                    let apiURL = "http://localhost:4000/api/adminActividad/demo";
+                        axios
+                            .get(apiURL)
+                            .then((res => {
+                                this.actividad = res.data;
+                            }))
+                            .catch((error) => {
+                                console.log(error);
+                            });     
+                
+                },
+             
+        }
     }
 
         

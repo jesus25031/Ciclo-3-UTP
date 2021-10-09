@@ -86,7 +86,7 @@
                         </div>
                         <div class="buttons">
                             <div>
-                                <v-btn id="vender" color="success" >Vender</v-btn>
+                                <v-btn id="vender" color="success" @click="prepararDatos()">Vender</v-btn>
                                 <v-btn id="cancelar" color="error" @click="btn_cancelar()">Cancelar</v-btn>
                             </div>
                         </div>
@@ -128,13 +128,22 @@
                             columnas_3:
                                 {filas_1:" Columna 3", filas_2:" ", filas_3:" "},
                             columnas_4:
-                                {filas_1:" Columna 4", filas_2:" ", filas_3:" "}}
+                                {filas_1:" Columna 4", filas_2:" ", filas_3:" "}},
+            
+                actividad:{
+                        user: "demo",
+                        Fecha: {filas_2: "", filas_3: "", fila_4: ""},
+                        Hora: {filas_2: "", filas_3: "", fila_4: ""},
+                        Operario:"demo-Operario",
+                        Producto: {filas_2: "", filas_3: "", fila_4: ""},
+                        Cantidad: {filas_2: "", filas_3: "", fila_4: ""},
+                        Total: {filas_2: "", filas_3: "", fila_4: ""},
+                },
             }
         },
         methods:{
              getAdminInfo(){  
                 console.log("Cargando datos");
-                console.log(this.tabla.columnas_1.filas_2);
                 let apiURL = "http://localhost:4000/api/adminInventario/" + "demo";
                     axios
                         .get(apiURL)
@@ -158,6 +167,7 @@
 
                 this.total = this.p_unidad * cant;
             },
+
             btn_cancelar(){
                 document.getElementById("input_cantidad").value = "";
                 document.getElementById("input_producto").value = "";
@@ -165,7 +175,63 @@
                 this.c_stock = "";
                 this.ubicacion = "";
                 this.total = "";
-            }
+            },
+
+
+            prepararDatos(){
+                let hoy = new Date();
+                var fecha = hoy.getFullYear() + "-"  + ( hoy.getMonth() + 1 ) + "-" + hoy.getDate();
+                var hora = hoy.getHours() + ':' + hoy.getMinutes();
+                let cant = document.getElementById("input_cantidad").value
+
+                this.actividad.Fecha = fecha;
+                this.actividad.Hora = hora;
+                this.actividad.Producto = this.producto,
+                this.actividad.Cantidad = cant,
+                this.actividad.Total = this.total
+
+            },
+            
+            crear_actividad(){
+                let apiURL = "http://localhost:4000/api/create-adminActividad";
+                axios
+                    .post(apiURL, this.actividad)
+
+                document.getElementById("input_cantidad").value = "";
+                document.getElementById("input_producto").value = "";
+                this.p_unidad = "";
+                this.c_stock = "";
+                this.ubicacion = "";
+                this.total = "";
+            },
+
+            actualizar_inventario(){
+                let apiURL = 'http://localhost:4000/api/update-admin-Inventario/' + "demo";
+                    axios
+                        .put(apiURL, this.actividad)
+
+                document.getElementById("input_cantidad").value = "";
+                document.getElementById("input_producto").value = "";
+                this.p_unidad = "";
+                this.c_stock = "";
+                this.ubicacion = "";
+                this.total = "";
+            },
+             deleteAdminActividad() {
+                let query = "demo"
+                let apiURL = 'http://localhost:4000/api/delete-adminActividad/' + query;
+                    axios
+                        .delete(apiURL)
+                        console.log("eliminando1")
+                        // .then(() => {
+                        // // this.$router.push("/admin");
+                        //     this.user = {
+                        //     user: "",
+                        //     };
+
+                        // });
+            },
+           
         }
         
     }
