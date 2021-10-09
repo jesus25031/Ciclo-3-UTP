@@ -1,5 +1,5 @@
 <template>
-    <v-app class="body">
+    <main>
         <form class="seccion-cajon"> 
                 <div class="logo">
                     <img src="../../Recursos/Logo.png">
@@ -21,7 +21,7 @@
             </div>  
                
             </form>
-    </v-app>
+    </main>
 </template>
 
 <script>

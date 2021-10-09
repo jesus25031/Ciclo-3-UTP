@@ -4,7 +4,7 @@ body {
   margin-left: 100px;
   margin-right: 100px;
   margin-top: 0px;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #000018 75%, #000000 100%);
     
  
@@ -161,6 +161,8 @@ body {
     height: 80px;
     margin-top: 10px;
   }
+
+
   
 
 

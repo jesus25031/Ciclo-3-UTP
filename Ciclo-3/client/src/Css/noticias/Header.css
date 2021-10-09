@@ -97,6 +97,7 @@
     border: none;
     color: black;
     font-weight: bold;
+     
 }
 
 .boton_inicio > a{
@@ -119,7 +120,7 @@
     border-top-right-radius: 20px;
     color: black;
     font-weight: bold;
-     
+    
 }
 
 .boton_servicio > a{
@@ -218,7 +219,6 @@
     text-decoration: none;
     color: white;
 }
-
 
 
 

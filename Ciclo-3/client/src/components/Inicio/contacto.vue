@@ -1,5 +1,5 @@
 <template>
-    <v-app class="body">
+    <main>
         <nav >
         <div class = "encabezado">
             <div class = "encabezado_logo">
@@ -37,73 +37,70 @@
         </div>          
         </div>
     </nav>
+    <br><div class="card-IMI">
+            <img class="main-imagen" src="../../Recursos/img2.png" style="width:100%">
 
+        </div><br>
+		
 
-
-    <div class="container-imagen">
-        <img src="../../Recursos/img2.jpg" alt="LOGO" width="1000" height="240" opacity="0.4" filter="alpha(opacity=40)">
-        <h2 class="image-text"></h2>
+<div class="card-contacto">
+  <h2>CONTACTANOS</h2>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label>NOMBRE</label>
+        <input type="text">
+      </div>
     </div>
 
-        <div class="section-1A">
-            
+    <div class="col">
+      <div class="form-group">
+        <label>APELLIDO</label>
+        <input type="text">
+      </div>
+    </div>
 
+    <div class="col">
+      <div class="form-group">
+        <label>EMAIL</label>
+        <input type="text">
+      </div>
+    </div>
 
-            <div class="col-3A">
+    <div class="col">
+      <div class="form-group">
+        <label>TELEFONO</label>
+        <input type="text">
+      </div>
+    </div>
 
-                <div class="service-content">
+    <div class="col">
+      <div class="form-group">
+        <label>TU MENSAJE</label>
+        <textarea></textarea>
+      </div>
+    </div>
 
-                    <h1>
-                        GESTION DE INVENTARIO
-                    </h1>
-
-		<form action="recibir.php" method="get" >
-		
-			<label>Nombre: <input type="text" required name="nombre" autofocus ></label><br><br>
-	
-			<label>Apellidos: <input type="text" placeholder="Escribe los dos apellidos" name="ape" size="25" maxlength="15"></label><br><br>
-
-			<label>Fecha: <input type="date" name="fecha" value="2021-01-28" /></label><br><br>
-
-			<label>Email: <input type="email" name="correo" multiple ></label><br><br>
-
-			<label>Telefono: <input type="tel" name="telefono" /></label><br><br>
-
-			<label> <textarea name="area" cols="40" rows="4" minlength="5" maxlength="200" >Escribenos tu opinión</textarea></label><br><br>
-
-			<label><input type="checkbox" value="acepta" name="condiciones" cheched="checked"> Acepto condiciones</label><br><br>
-
-			<v-btn color="error" value="Borrar">Cancelar</v-btn>
-
-			<v-btn color="primary" value="Enviar">Enviar</v-btn>
-		</form>             
-                </div>
-            </div>
-
+    <div class="col">
+      <input type="submit" value="Enviar">
+    </div>
+  </div>
 </div>
 
 <footer class="footer">
-        <ul>
-            
-            <p class="section-textF">MISION TIC 2022</p>
-            <p class="section-textF">aplicación destinada al control de inventarios de pymes del sector de comercio para facilitar la gestión y administración de los productos </p>
-            <p class="section-textF"><a href="https://github.com/jesus25031/Ciclo-3-UTP" target="_blank">ENLACE GITHUB</a></p>  
-            
-            .
-      </ul>  
-      <ul>    
-             <p class="section-textF"> ANGIE QUINTANA @vanequina </p>
-             <p class="section-textF"> BRAYAN MORENO @CoupKwon-dot</p>
-             <p class="section-textF"> CRISTHIAN FERNANDEZ @cridavifer</p>
-             <p class="section-textF"> JESUS VILORIA @jesus25031</p>
-             
-            
-            
-       </ul>
+            <ul>
+                
+                <p class="section-textF">MISION TIC 2022</p>
+                <p class="section-textF">aplicación destinada al control de inventarios de pymes del sector de comercio para facilitar la gestión y administración de los productos </p>
+            </ul>  
+            <ul>    
+                 <br><p class="section-textF"> BRAYAN MORENO @CoupKwon-dot</p>
+                 <p class="section-textF"> JESUS VILORIA @jesus25031</p> 
+                
+           </ul>    
+       </footer>
 
-</footer>
-
-    </v-app>
+    </main>
 </template>
 
 

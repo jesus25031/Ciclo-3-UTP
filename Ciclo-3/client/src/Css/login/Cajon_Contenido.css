@@ -1,18 +1,30 @@
+
 .seccion-cajon{
     position: absolute;
-    top:40%;
+    top:53%;
     left: 50%;
     transform: translate(-50%,-50%);
     height: 300px;
     width: 500px;
     text-align: center;
 
-    background-color: rgb(245, 243, 243);
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
     border-radius: 15px;
-    box-shadow: -1rem 0 3rem rgb(52, 41, 95);
+    box-shadow: -1rem 0 3rem rgb(59, 23, 204);
     display: grid;
     grid-template-columns: repeat(2, 250px);
     grid-template-rows: 30% 20% 10% 20% 20%;
+}
+
+h1{
+    color:deeppink
+}
+
+.indicacion p{
+    color: rgb(73, 147, 165);
 }
 
 .logo {
@@ -41,9 +53,12 @@
 
 .password { 
     grid-area: 5 / 1 / 6 / 3;
-    background-color: white;
-    margin-left: 100px;
-    margin-right: 100px;
+    background: rgba(236, 17, 17, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    margin-left: 150px;
+    margin-right: 130px;
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -55,7 +70,7 @@
 }
 
 .password > input{
-    border:0;
+    border:5px;
     cursor: text;
     outline: none;
 

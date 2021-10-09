@@ -1,5 +1,5 @@
 <template>
-    <v-app class="body">
+    <main>
         <nav >
         <div class = "encabezado">
             <div class = "encabezado_logo">
@@ -37,73 +37,65 @@
         </div>        
         </div>
     </nav>
-
-       <div class="container">
-                    <div class="card">
-                        <img src="../../Recursos/vane.jpg" width="100" height="150">
-                        <h2>
-                            Angie Vanessa Quintana Arevalo
-                        </h2>
-                        <p>Hola! Soy estudiante de Historia interesada por la cultura de Medio Oriente y aprendiz de programación. Considero que las ciencias sociales y la programación pueden ayudarse mutuamente para lograr que el conocimiento sea más accesible para la gente </p>  
-                    </div>
-           
-                    <div class="card">
-                        <img src='../../Recursos/brayan.jpg' width="300" height="400">
-                        <h2>
-                            Brayan Steven Moreno Rodriguez
-                        </h2>
-                        <p>
-                            Mucho gusto Soy Brayan Moreno, tengo 21 años, nací en Bogotá Colombia, soy tecnológo mecatronico.
-Me gusta la programación porque a diferencia del mundo real, en la programación el único límite es la  imaginación.
+ 
+<div class="container">
+  <div class="card-PR">
+    <img src="../../Recursos/brayan.jpg" alt="Person" class="card__image">
+    <p class="card__name">BRAYAN MORENO</p>
+    <p class="card__text">
+Soy Brayan Moreno, tengo 21 años, nací en Bogotá Colombia,<br> soy tecnológo mecatronico.
+Me gusta la <br>programación porque a diferencia del mundo real,<br> en la programación el único límite es la  imaginación.
                         </p>
-                    </div>
-
-                    <div class="card">
-                        <img src="../../Recursos/cris.jpg" alt="" width="300" height="400">
     
-                        <h2>
-                            Cristhian David Fernandez Ramirez
-                        </h2>
-                        <p>
-                            Ingeniero electricista de la Universidad Tecnologica de Pereira, iniciando en este mundo de la programación por ser un insumo esencial en esta nueva era tecnologica, donde la programación esta presente en todas las profesiones, se ha convertido en necesaria como las matematicas en las ciencias e ingenierias.
-                        </p>
-                    </div>
+    <ul class="social-icons">
+     <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'instagram']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'twitter']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'github']" size="3x"/></i>
+          </a>
+      </li>
+    </ul>
 
-                    <div class="card">
-                        <img src="../../Recursos/jesus.png" alt="" width="300" height="400">
+</div>
+  <div class="card-PR">
+    <img src="../../Recursos/jesus.jpg" alt="Person" class="card__image">
+    <p class="card__name">JESUS VILORIA</p>
+    <p class="card__text">
+Soy Jesus Viloria, tengo 20 años, de Bogotá - <br>Colombia, estudiante de Administracion Publica
+Y tambien amante de la programacion, es sorprendente lo <br>que unas lineas de codigo pueden crear 
+                        </p>
     
-                        <h2>
-                            Jesus  Andres  Viloria  Alvarez
-                        </h2>
-                        <p class="service-text memebers">
-                            Estudiante de Mision Tic 2021
-                        </p>
-                    </div>
-                </div>
+    <ul class="social-icons">
+     <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'instagram']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'twitter']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'github']" size="3x"/></i>
+          </a>
+      </li>
+    </ul>
+  </div>
+	
+</div>	
 
-
-<footer class="footer">
-        <ul>
-            
-                      <p class="section-textF">MISION TIC 2022</p>
-            <p class="section-textF">aplicación destinada al control de inventarios de pymes del sector de comercio para facilitar la gestión y administración de los productos </p>
-            <p class="section-textF"><a href="https://github.com/jesus25031/Ciclo-3-UTP" target="_blank">ENLACE GITHUB</a></p>  
-            
-            .
-      </ul>  
-      <ul>    
-             <p class="section-textF"> ANGIE QUINTANA @vanequina </p>
-             <p class="section-textF"> BRAYAN MORENO @CoupKwon-dot</p>
-             <p class="section-textF"> CRISTHIAN FERNANDEZ @cridavifer</p>
-             <p class="section-textF"> JESUS VILORIA @jesus25031</p>
-             
-            
-            
-       </ul>
-
-</footer>
-
-    </v-app>
+    </main>
 </template>
 
 <script>

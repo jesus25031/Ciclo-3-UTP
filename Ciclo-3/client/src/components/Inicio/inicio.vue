@@ -41,59 +41,96 @@
         <div class="card-IMI">
             <img class="main-imagen" src="../../Recursos/img2.png" style="width:100%">
 
-        </div><br><br>
+        </div><br>
 
-        <div class="box">
-            <div class="content">
-                <div class="icon.area">
-                    <i class="fa fa-envira" ></i>
-                </div>
-                <h2>Gestion Inventario</h2>
-                <p> Facil gestion de Inventario, uso para cualquier persona</p>
-            </div>
+        <div class="card-FEA">
+            <h1>Funciones</h1>
         </div>
 
-        <div class="box">
-            <div class="content">
-                <div class="icon.area">
-                    <i class="fa fa-laptop" ></i>
-                </div>
-                <h2>Aprendizaje Rapido</h2>
-                <p> Facil gestion de Inventario, uso para cualquier persona</p>
-            </div>
+    <div class="row1-container">
+    <div class="box box-down cyan">
+      <h2>Busqueda Facil</h2>
+      <p>Monitoria facil la busqueda de articulos, mejor control</p>
+      <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="">
+    </div>
+
+    <div class="box box-down blue">
+      <h2>Panel Administracion</h2>
+      <p>Maneja facil el inventario con un Acceso Administrador y restringe caracteristicas para tus operarios</p>
+      <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+    </div>
+
+    <div class="box red">
+      <h2>Plataforma Intuitiva</h2>
+      <p>interfaz Amigable para mejor control</p>
+      <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="">
+    </div>
+    </div>
+    <div class="card-FEA">
+            <h1>EQUIPO</h1>
         </div>
 
-        <div class="box">
-            <div class="content">
-                <div class="icon.area">
-                    <i class="fa fa-camera" ></i>
-                </div>
-                <h2>Control Multiusuario</h2>
-                <p> Facil gestion de Inventario, uso para cualquier persona</p>
-            </div>
-        </div>
+<div class="container">
+  <div class="card-PR">
+    <img src="../../Recursos/brayan.jpg" alt="Person" class="card__image">
+    <p class="card__name">BRAYAN</p>
+    
+    <ul class="social-icons">
+     <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'instagram']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'twitter']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'github']" size="3x"/></i>
+          </a>
+      </li>
+    </ul>
 
-<footer class="footer">
-        <ul>
-            
-            <p class="section-textF">MISION TIC 2022</p>
-            <p class="section-textF">aplicación destinada al control de inventarios de pymes del sector de comercio para facilitar la gestión y administración de los productos </p>
-            <p class="section-textF"><a href="https://github.com/jesus25031/Ciclo-3-UTP" target="_blank">ENLACE GITHUB</a></p>  
-            
-            .
-      </ul>  
-      <ul>    
-             <p class="section-textF"> ANGIE QUINTANA @vanequina </p>
-             <p class="section-textF"> BRAYAN MORENO @CoupKwon-dot</p>
-             <p class="section-textF"> CRISTHIAN FERNANDEZ @cridavifer</p>
-             <p class="section-textF"> JESUS VILORIA @jesus25031</p>
-             
+  </div>
+  <div class="card-PR">
+    <img src="../../Recursos/jesus.jpg" alt="Person" class="card__image">
+    <p class="card__name">JESUS</p>
+    
+    <ul class="social-icons">
+     <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'instagram']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'twitter']" size="3x"/></i>
+          </a>
+      </li>
+      <li>
+          <a href="#">
+              <i><font-awesome-icon :icon="['fab', 'github']" size="3x"/></i>
+          </a>
+      </li>
+    </ul>
+  </div>
+    
+  </div><br><br>
 
-            
-            
-       </ul>
-
-    </footer>   
+ <footer class="footer">
+            <ul>
+                
+                <p class="section-textF">MISION TIC 2022</p>
+                <p class="section-textF">aplicación destinada al control de inventarios de pymes del sector de comercio para facilitar la gestión y administración de los productos </p>
+            </ul>  
+            <ul>    
+                 <br><p class="section-textF"> BRAYAN MORENO @CoupKwon-dot</p>
+                 <p class="section-textF"> JESUS VILORIA @jesus25031</p> 
+                
+           </ul>    
+       </footer>  
     </main>
 </template>
 

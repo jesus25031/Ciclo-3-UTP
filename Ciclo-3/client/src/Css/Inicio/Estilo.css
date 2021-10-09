@@ -1,18 +1,17 @@
 body {
-    height: auto;
+    height: 100%;
     width: auto;
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 0px;
     font-family: sans-serif;
-    background-image: radial-gradient(circle at 30.13% 46.5%, #644297 0, #39296c 25%, #10103f 50%, #000018 75%, #000000 100%);
-    align-items: center;
+    background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #0d0d3d 75%, #140b3d 100%);    align-items: center;
 }
 
 .card-IMI{
     background: rgba( 255, 255, 255, 0 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 0px );
+    backdrop-filter: blur( 80px );
     -webkit-backdrop-filter: blur( 0px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 15px;
@@ -25,19 +24,164 @@ body {
     border-radius: 15px;
 }
 
-.box{
-    width: auto;
-    height: auto;
-    border-radius: 10px;
-    margin: 0 15px;
-    color: #fff;
-    text-align: center;
+.box p {
+    color: rgb(177, 255, 229);
+}
 
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px blue;
+    padding: 30px;
+    margin: 20px;
+   backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 15px;
+    background: rgba( 255, 255, 255, 0.3 );
+
+}
+.cyan {
+    border-top: 3px solid cyan;
+}
+.red {
+    border-top: 3px solid red;
+}
+.blue {
+    border-top: 3px solid blue;
+}
+.orange {
+    border-top: 3px solid orange;
+}
+
+h2 {
+    color: white;
 }
 
 
+@media (min-width: 950px) {
+    .row1-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1%;
+        padding-bottom: 1%;
+    }
+    .box-down {
+        position:static;
+        top: 5px;
+    }
+    .box {
+        width: 26%;
+     
+    }
+    
+}
+
+.card-FEA{
+    align-items: center;
+    padding-top: 1%;
+    width: auto;
+    height: auto;
+    
+    
+}
+
+.card-FEA h1 {
+    text-align: center;
+    color: whitesmoke;
+    padding-top: 3%;
+    width: auto;
+    height: auto;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;500&display=swap");
 
 
+.container {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: none;
+  font-family: 'Baloo Paaji 2', cursive;
+  padding-top: 1%;
+}
 
+.card-PR {
+  background-color: #222831;
+  height: auto;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 30px 40px -20px rgb(182, 71, 173);
+  color: white;
+}
 
+.card__name {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
 
+.card__image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 5px solid #272133;
+  margin-top: 20px;
+  box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
+}
+
+.social-icons {
+  padding: 1;
+  list-style: none;
+  margin: 1em;
+  position: relative;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position:center;
+  font-size: 1em;
+}
+
+.social-icons i {
+  color: rgb(255, 255, 255);
+  position: center;
+  top: 0.95em;
+  left: 0.96em;
+  transition: all 265ms ease-out;
+}
+.footer{
+    height: auto;
+    background-color: rgba( 255, 255, 255, 0 );
+    clear:both;
+    display: grid;
+    grid-template-columns: 55% 45%;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px blue;
+    padding: 30px;
+    margin: 20px;
+   backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 15px;
+    background: rgba( 255, 255, 255, 0.3 );
+}
+
+.section-textF{
+    margin: 0;
+    color: #ffffff;
+    background: rgba( 255, 255, 255, 0 );
+    font-weight: bold;
+    text-align: center;
+    border: 1px;
+    padding-top: 0%;
+    
+}
