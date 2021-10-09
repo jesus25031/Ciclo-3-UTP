@@ -1,3 +1,4 @@
+
 <template>
    <main>
     <nav >
@@ -114,10 +115,9 @@
     import "../../Css/Servicios/Servicios.css"
 
   export default {
-  
+
   }
 
 </script>
 
-<style>
-</style>
+

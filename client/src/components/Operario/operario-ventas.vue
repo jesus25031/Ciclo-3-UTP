@@ -58,20 +58,36 @@
                     </div>
                     <div class="ventana_interaccion">
                         <div class="inputs">
-                             <div id="producto"><input  type="text" placeholder=" Producto"> </div>
-                             <div id="cantidad"><input  type="number" placeholder=" Cantidad"></div>
+                            <datalist id="name_productos">
+                                    <option :value="tabla.columnas_1.filas_2"></option>
+                                    <!-- <option value="Amarillo"></option>
+                                    <option value="Burdeos"></option>
+                                    <option value="Caoba"></option>
+                                    <option value="Marrón"></option>
+                                    <option value="Naranja"></option>
+                                    <option value="Verde"></option> -->
+                            </datalist>
+                             <div id="producto"><input id="input_producto" list="name_productos" 
+                                                type="text" placeholder=" Producto"  
+                                                v-on:change="setItems()">
+                            </div>
+                             <div id="cantidad"><input id="input_cantidad" type="number" 
+                                                placeholder=" Cantidad"
+                                                v-on:change="setTotal()"></div>
+                             <div id= "total">Total: $ {{total}}</div>
                         </div>
                         <div class="information">
                             <ul>
-                                <li>Producto: ...</li>
-                                <li>Precio Unidad: ###</li>
-                                <li>Cantidad en Stock: ###</li>
+                                <li>Producto: {{producto}}</li>
+                                <li>Precio Unidad: ${{p_unidad}}</li>
+                                <li>Cantidad en Stock: {{c_stock}}</li>
+                                <li>Ubicación: {{ubicacion}}</li>
                             </ul>
                         </div>
                         <div class="buttons">
                             <div>
-                                <v-btn id="vender" color="success">Vender</v-btn>
-                                <v-btn id="cancelar" color="error">Cancelar</v-btn>
+                                <v-btn id="vender" color="success" >Vender</v-btn>
+                                <v-btn id="cancelar" color="error" @click="btn_cancelar()">Cancelar</v-btn>
                             </div>
                         </div>
                     </div>
@@ -87,10 +103,71 @@
     import '../../Css/operario-ventas/CajonCarpetas.css'
     import '../../Css/operario-ventas/Container.css'
     import '../../Css/operario-ventas/Tabla.css'
-    // import axios from "axios";
+    import axios from "axios";
+
+   
 
     export default {
-    
+        
+        created(){
+            this.getAdminInfo()
+        },
+        data(){
+           
+            return{
+                producto: "",
+                p_unidad: "",
+                c_stock: "",
+                ubicacion: "",
+                total: 0,
+                tabla: {
+                            columnas_1:
+                                {filas_1:" Columna 1", filas_2:" ", filas_3:" "},
+                            columnas_2:
+                                {filas_1:" Columna 2", filas_2:"", filas_3:" "},
+                            columnas_3:
+                                {filas_1:" Columna 3", filas_2:" ", filas_3:" "},
+                            columnas_4:
+                                {filas_1:" Columna 4", filas_2:" ", filas_3:" "}}
+            }
+        },
+        methods:{
+             getAdminInfo(){  
+                console.log("Cargando datos");
+                console.log(this.tabla.columnas_1.filas_2);
+                let apiURL = "http://localhost:4000/api/adminInventario/" + "demo";
+                    axios
+                        .get(apiURL)
+                        .then((res) => {
+                            this.tabla = res.data.tabla;
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                        });     
+            },
+            setItems(){
+                let text = document.getElementById("input_producto").value;
+                this.producto = text;
+
+                this.p_unidad = this.tabla.columnas_2.filas_2;
+                this.c_stock = this.tabla.columnas_3.filas_2;
+                this.ubicacion = this.tabla.columnas_4.filas_2;
+            },
+            setTotal(){
+                let cant = document.getElementById("input_cantidad").value;
+
+                this.total = this.p_unidad * cant;
+            },
+            btn_cancelar(){
+                document.getElementById("input_cantidad").value = "";
+                document.getElementById("input_producto").value = "";
+                this.p_unidad = "";
+                this.c_stock = "";
+                this.ubicacion = "";
+                this.total = "";
+            }
+        }
+        
     }
 
         

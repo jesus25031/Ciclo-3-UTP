@@ -97,14 +97,17 @@
                             <p>Filas:</p>
                         </div>
                         <div class="editarFilas">
-                            <input  min="2" max="Infinity" type="number" value="2">
+                            <input  min="2" max="Infinity" type="number" value="3">
                         </div>     
                     </div>
                     
                 </div>
                 <div class="Contenedor-boton">
                     <div class="botonGuardar">
-                         <v-btn color="primary" v-on:click="prepararDatos(), actualizarAdminInventario()">Guardar</v-btn>
+                         <v-btn 
+                                color="info"
+                                v-on:click="prepararDatos(), actualizarAdminInventario()">Guardar
+                         </v-btn>
                     </div>                        
                 </div>
             </div>
@@ -131,7 +134,12 @@
                             <th scope="col"><input class="inputContenido" id="col-3 row-3" type="text" :value="admin_inventarios.tabla.columnas_3.filas_3"></th>
                             <th scope="col"><input class="inputContenido" id="col-4 row-3" type="text" :value="admin_inventarios.tabla.columnas_4.filas_3"></th>
                         </tr>
-
+                        <tr>
+                            <th scope="col"><input class="inputContenido" id="col-1 row-4" type="text" :value="admin_inventarios.tabla.columnas_1.filas_4"></th>
+                            <th scope="col"><input class="inputContenido" id="col-2 row-4" type="text" :value="admin_inventarios.tabla.columnas_2.filas_4"></th>
+                            <th scope="col"><input class="inputContenido" id="col-3 row-4" type="text" :value="admin_inventarios.tabla.columnas_3.filas_4"></th>
+                            <th scope="col"><input class="inputContenido" id="col-4 row-4" type="text" :value="admin_inventarios.tabla.columnas_4.filas_4"></th>
+                        </tr>
                     </tbody>
                 </table> 
             </div>
@@ -256,7 +264,7 @@
         
 
     }
-
         
 
 </script> 
+

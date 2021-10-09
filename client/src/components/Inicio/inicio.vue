@@ -12,7 +12,7 @@
             </div>
             <div class = "encabezado_botones_Servicio" >
                 <div class = "boton_servicio">
-                    <router-link to="/servicios">Servicios</router-link>
+                   <router-link to="/servicios"  >Servicios</router-link>
                 </div>  
             </div>
             <div class = "encabezado_botones_Noticias">
@@ -134,7 +134,7 @@
     </main>
 </template>
 
-<script>
+<script >
     import "../../Css/Inicio/Estilo.css";
     import "../../Css/Inicio/Header.css";
     
@@ -144,7 +144,8 @@
             return{
 
             }
-        }   
+        },
+
     }
 </script>
 <style>

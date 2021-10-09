@@ -127,6 +127,10 @@ export default{
         }
 
 }
-    }
+    },
+    mounted(){
+        this.$forceUpdate();
+        
+    },
 }
 </script>
