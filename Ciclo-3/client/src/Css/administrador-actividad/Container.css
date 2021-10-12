@@ -1,4 +1,4 @@
-.container-com{
+.container-adma{
     margin-top: 50px;
     margin-left: 5px;
     margin-right: 5px;
@@ -24,11 +24,11 @@
 
 .cajon-carpetas{
     /* visibility: hidden; */
+   
     margin-top: 1px;
     margin-left: 1px;
     margin-right: 1px;
     margin-bottom: 5px;
-    border-radius: 10px;
     height: 98%;
     width: 280px;
 
@@ -46,6 +46,8 @@
     width: auto;
     padding-left: 15%;
     padding-top: 5%;
-}
+}   
+
+
 
 

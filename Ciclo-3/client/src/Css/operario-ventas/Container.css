@@ -1,8 +1,8 @@
-.container-com{
+.container-ven{
     margin-top: 50px;
     margin-left: 5px;
     margin-right: 5px;
-    height: 900px;
+    height: 600px;
     width: auto;
 
     display: grid;
@@ -24,6 +24,7 @@
 
 .cajon-carpetas{
     /* visibility: hidden; */
+    background-color: rgb(126, 126, 126);
     margin-top: 1px;
     margin-left: 1px;
     margin-right: 1px;
@@ -37,12 +38,13 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 15px;
     background: rgba( 255, 255, 255, 0.3 );
-    box-shadow: 0px 30px 40px -20px blue;
+    box-shadow: 0px 30px 40px -20px blue;    
 }
 
 .seccion-Tabla{
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 2 / 3; 
     height: 98%;
+    margin-right: 20px;
     width: auto;
     padding-left: 15%;
     padding-top: 5%;

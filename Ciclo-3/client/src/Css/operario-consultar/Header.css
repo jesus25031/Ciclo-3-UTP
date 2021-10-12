@@ -27,13 +27,13 @@
     grid-template-columns: 40% 10% 10% 40%;
     grid-template-rows: 50px;
     grid-column-gap: 15px;
-    border-bottom: 5px solid rgb(0,0,0);
-    box-shadow: -1rem 0 3rem rgb(52, 41, 95);
+    border-bottom: 5px solid rgb(255, 255, 255);
+    box-shadow: -1rem 0 3rem rgb(230, 230, 230);
     border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0);
     margin-left: 95px;
-    margin-right: 200px;
-    background-color: rgb(245, 243, 243);
-    
+    margin-right: 200px;   
+    margin-top: 10px;
   }
   
   .encabezado > div {
@@ -59,6 +59,7 @@
     border: none;
     color: black;
     font-weight: bold;
+    border-bottom: none;    
 }
 
 .boton_vender > a{
@@ -67,11 +68,10 @@
 }
 
 .boton_vender:hover{
-    border-bottom: 2px solid cyan; 
+    border-bottom: 4px solid rgb(8, 252, 0);
 }
 
 .boton_consultar{
-    background-color: rgb(203,220,247);
     display:table;
     margin:0px auto;
     margin-bottom: 0px;
@@ -82,6 +82,7 @@
     border-top-right-radius: 20px;
     color: black;
     font-weight: bold;
+    border-bottom: 4px solid rgb(255, 0, 0);
 }
 
 .boton_consultar > a{
@@ -95,8 +96,8 @@
 
 .boton_salir{
     display: inline-block;
-    background: -prefix-linear-gradient(left bottom white, black 95%);
-    background: linear-gradient(to top right,white, black 95%);
+    background: -prefix-linear-gradient(left bottom rgb(255, 0, 0), black 95%);
+    background: linear-gradient(to top right,rgb(253, 0, 0), rgb(0, 0, 0) 95%);
     display:table;
     margin:0px auto;
     margin-bottom: 0px;
@@ -113,15 +114,10 @@
     width: 82px;
 }
 
-.boton_vender >  a:link, a:visited{
+.boton_vender, .boton_consultar >  a:link, a:visited{
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
 }
-.boton_consultar > a:link{
-    text-decoration: none;
-    color: black;
-}
-
 .boton_salir > a:link{
     text-decoration: none;
     color: white;

@@ -1,4 +1,4 @@
-.Container{
+.container-cons{
     margin-top: 50px;
     margin-left: 5px;
     margin-right: 5px;
@@ -10,9 +10,15 @@
     grid-template-rows: 100%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+
+    backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 15px;
+    background: rgba( 255, 255, 255, 0.3 );
 }
 
-.Seccion-Carpetas{
+.seccion-Carpetas{
     grid-area: 1 / 1 / 2 / 2;
 }
 
@@ -25,12 +31,22 @@
     margin-bottom: 5px;
     border-radius: 10px;
     height: 98%;
-    width: auto;
+    width: 280px;
+
+    backdrop-filter: blur( 80px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 15px;
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0px 30px 40px -20px blue;
 }
 
-.Seccion-Tabla{
+.seccion-Tabla{
     grid-area: 1 / 2 / 2 / 3;
     height: 98%;
+    width: auto;
+    padding-left: 15%;
+    padding-top: 5%;
 }
 
 

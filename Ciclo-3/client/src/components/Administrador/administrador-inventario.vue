@@ -1,7 +1,7 @@
 <template>
-  <v-app class="body">
+  <main>
      <header >
-        <div class = "encabezado"  >
+        <div class = "encabezado-adm"  >
             <div class = "encabezado_logo">
                 <img class = "imagen_logo" src="../../Recursos/Logo.png">
             </div>
@@ -15,11 +15,7 @@
                      <router-link to="/admin/compartir">Compartir</router-link>
                 </div>  
             </div>
-            <div class = "encabezado_botones_VistaOperario">
-                <div class = "boton_vistaOperario">
-                     <router-link to="/admin/vistaOperario">Vista Operario</router-link>
-                </div> 
-            </div>
+
             <div class = "encabezado_botones_Actividad">
                 <div class = "boton_actividad">
                      <router-link to="/admin/actividad">Actividad</router-link>
@@ -32,7 +28,7 @@
             </div>            
         </div>
     </header> 
-    <section class="Container" >
+    <section class="container-inv" >
             <div class="Seccion-Carpetas"> 
             <div class="cajon-carpetas">
                 <div class="inventarios-titulo">
@@ -78,13 +74,13 @@
                 </div>
             </div>
         </div> 
-        <div class="Seccion-Tabla">
+        <div class="seccion-Tabla">
             <div class="Titulo">
-                <p id="nameInventario">Inventario1</p>
+                <p id="nameInventario">Inventario_1</p><br>
             </div>
-            <div class="EditarTabla">
-                <div id="inputsTabla">
-                    <div class="Columnas">
+            <br><div class="EditarTabla">
+                <br><div id="inputsTabla">
+                    <br><div class="Columnas">
                         <div class="tituloColumnas">
                             <p>Columnas:</p>
                         </div>
@@ -97,18 +93,21 @@
                             <p>Filas:</p>
                         </div>
                         <div class="editarFilas">
-                            <input  min="2" max="Infinity" type="number" value="2">
+                            <input  min="2" max="Infinity" type="number" value="3">
                         </div>     
                     </div>
                     
                 </div>
                 <div class="Contenedor-boton">
                     <div class="botonGuardar">
-                         <v-btn color="primary" v-on:click="prepararDatos(), actualizarAdminInventario()">Guardar</v-btn>
+                         <v-btn 
+                                color="principal"
+                                v-on:click="prepararDatos(), actualizarAdminInventario()">Guardar
+                         </v-btn>
                     </div>                        
                 </div>
             </div>
-            <div class="Tabla" style="overflow: scroll;">
+            <br><div class="Tabla" style="overflow: scroll;">
                <table class="table  table-bordered"> 
                     <thead class="table-dark">
                        <tr>
@@ -131,14 +130,19 @@
                             <th scope="col"><input class="inputContenido" id="col-3 row-3" type="text" :value="admin_inventarios.tabla.columnas_3.filas_3"></th>
                             <th scope="col"><input class="inputContenido" id="col-4 row-3" type="text" :value="admin_inventarios.tabla.columnas_4.filas_3"></th>
                         </tr>
-
+                        <tr>
+                            <th scope="col"><input class="inputContenido" id="col-1 row-4" type="text" :value="admin_inventarios.tabla.columnas_1.filas_4"></th>
+                            <th scope="col"><input class="inputContenido" id="col-2 row-4" type="text" :value="admin_inventarios.tabla.columnas_2.filas_4"></th>
+                            <th scope="col"><input class="inputContenido" id="col-3 row-4" type="text" :value="admin_inventarios.tabla.columnas_3.filas_4"></th>
+                            <th scope="col"><input class="inputContenido" id="col-4 row-4" type="text" :value="admin_inventarios.tabla.columnas_4.filas_4"></th>
+                        </tr>
                     </tbody>
                 </table> 
             </div>
         </div>
 
     </section>
-  </v-app>
+  </main>
 </template>
 
 <script>
@@ -256,7 +260,7 @@
         
 
     }
-
         
 
 </script> 
+
