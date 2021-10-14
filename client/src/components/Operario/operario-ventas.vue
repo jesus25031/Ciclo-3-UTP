@@ -159,9 +159,15 @@
                 let text = document.getElementById("input_producto").value;
                 this.producto = text;
 
-                this.p_unidad = this.tabla.columnas_2.filas_2;
-                this.c_stock = this.tabla.columnas_3.filas_2;
-                this.ubicacion = this.tabla.columnas_4.filas_2;
+                for( let filas in  this.tabla.columnas_1){
+
+                    if( this.tabla.columnas_1[filas] == this.producto){
+                        this.p_unidad= this.tabla.columnas_2[filas],
+                        this.c_stock= this.tabla.columnas_3[filas],
+                        this.ubicacion= this.tabla.columnas_4[filas]
+                    }
+                }
+
             },
             setTotal(){
                 let cant = document.getElementById("input_cantidad").value;
@@ -199,54 +205,36 @@
                 axios
                     .post(apiURL, this.actividad)
 
+            },
+
+            actualizarAdminInventario() {                  
+                let cant = document.getElementById("input_cantidad").value;    
+                for( let filas in  this.tabla.columnas_1){
+
+                    if( this.tabla.columnas_1[filas] == this.producto){
+                        // console.log("producto = " +  this.tabla.columnas_1[filas])
+                        // console.log("Precio Unidad = " + this.tabla.columnas_2[filas])
+                        // console.log("Cantidad en Stock = " + this.tabla.columnas_3[filas])
+                        // console.log("Ubicación = " + this.tabla.columnas_4[filas])
+                        let newCant = (parseInt(this.tabla.columnas_3[filas]) - (parseInt(cant)))
+                        this.tabla.columnas_3[filas] = newCant
+                        console.log(this.tabla.columnas_3[filas])
+                    }
+                }
+                
+                let apiURL = 'https://agile-bastion-32260.herokuapp.com/apiupdate-cantidad-Inventario/demo/';
+                    
+                    axios
+                        .put(apiURL, this.tabla)
+
                 document.getElementById("input_cantidad").value = "";
                 document.getElementById("input_producto").value = "";
+                this.producto = "";
                 this.p_unidad = "";
                 this.c_stock = "";
                 this.ubicacion = "";
                 this.total = "";
-            },
-
-            actualizarAdminInventario() {
-                    for( let columnas in  this.tabla){
-                        
-                        for( let filas in  this.tabla[columnas]){
-
-                            if( this.tabla[columnas][filas] == this.producto){
-                                console.log("producto = " +  this.tabla[columnas][filas])
-                            }
-                        }
-                
-                    }
-                
-                
-                // let apiURL = 'https://agile-bastion-32260.herokuapp.com/api/update-admin-Inventario/demo';
-                    
-                //     axios
-                //         .put(apiURL, this.admin_inventarios)
-
-                // document.getElementById("input_cantidad").value = "";
-                // document.getElementById("input_producto").value = "";
-                // this.producto = "";
-                // this.p_unidad = "";
-                // this.c_stock = "";
-                // this.ubicacion = "";
-                // this.total = "";
-            },
-             deleteAdminActividad() {
-                let query = "demo"
-                let apiURL = 'https://agile-bastion-32260.herokuapp.com/api/delete-adminActividad/' + query;
-                    axios
-                        .delete(apiURL)
-                        console.log("eliminando1")
-                        // .then(() => {
-                        // // this.$router.push("/admin");
-                        //     this.user = {
-                        //     user: "",
-                        //     };
-
-                        // });
-            },
+            }
            
         }
         

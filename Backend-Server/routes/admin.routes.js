@@ -2,7 +2,7 @@ let express = require("express");
 const adminRoute = express.Router();
 
 
-let actividadModel = require("../models/actividad");
+let actividadModel = require("../models/actividades");
 let adminInventarioModel = require("../models/admin.inventarios");
 
 
@@ -74,22 +74,20 @@ adminRoute.route("/create-adminInventario").post((req, res, next) => {
         if (error) {
             return next(error);
         } else {
-            console.log(data);
             res.json(data);
         }
     });
 });
 
-// adminRoute.route("/create-adminActividad").post((req, res, next) => {
-//     actividadModel.create(req.body, (error, data) => {
-//          if (error) {
-//              return next(error);
-//          } else {
-//              console.log(data);
-//              res.json(data);
-//          }
-//      });
-//  });
+adminRoute.route("/create-adminActividad").post((req, res, next) => {
+    actividadModel.create(req.body, (error, data) => {
+         if (error) {
+             return next(error);
+         } else {
+             res.json(data);
+         }
+     });
+ });
 
 adminRoute.route("/update-admin-Inventario/:user").put((req, res, next) => {
     adminInventarioModel.findOneAndUpdate(
@@ -97,6 +95,24 @@ adminRoute.route("/update-admin-Inventario/:user").put((req, res, next) => {
         req.params.user,
         {
             $set: req.body,
+        },
+        (error, data) => {
+            if (error) {
+                console.log(error);
+                return next(error);
+            } else {
+                res.json(data);
+            }
+        }
+    );
+});
+
+adminRoute.route("/update-cantidad-Inventario/:user").put((req, res, next) => {
+    adminInventarioModel.findOneAndUpdate(
+    
+        req.params.user,
+        {
+            tabla: req.body,
         },
         (error, data) => {
             if (error) {
