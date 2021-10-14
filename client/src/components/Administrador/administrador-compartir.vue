@@ -1,7 +1,7 @@
 <template>
-    <v-app class="body">
+    <main>
         <header >
-            <div class = "encabezado">
+            <div class = "encabezado-adm">
                 <div class = "encabezado_logo">
                     <img class = "imagen_logo" src="../../Recursos/Logo.png">
                 </div>
@@ -15,11 +15,6 @@
                         <router-link to="/admin/compartir">Compartir</router-link>
                     </div>  
                 </div>
-                <div class = "encabezado_botones_VistaOperario">
-                    <div class = "boton_vistaOperario">
-                        <router-link to="/admin/vistaOperario">Vista Operario</router-link>
-                    </div> 
-                </div>
                 <div class = "encabezado_botones_Actividad">
                     <div class = "boton_actividad">
                         <router-link to="/admin/actividad">Actividad</router-link>
@@ -32,8 +27,8 @@
                 </div>           
             </div>
         </header> 
-        <section class="Container">
-            <div class="Seccion-Carpetas">
+        <section class="container-com">
+            <div class="seccion-Carpetas">
                 <div class="cajon-carpetas">
                     <div class="inventarios-titulo">
                         <P>INVENTARIOS</P>
@@ -56,7 +51,7 @@
 
                     <!-- Contenido de la carpeta -->
                     <div class="contenido-inventario" type="button">
-                        <a > inventario1-bs</a>
+                        <a > inventario_1-bs</a>
                         <div id="openFile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-ruled" viewBox="0 0 16 16">
                                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h7v1a1 1 0 0 1-1 1H6zm7-3H6v-2h7v2z"/>
@@ -67,16 +62,16 @@
             </div>
             <div class="Seccion-Tabla">
                 <div class="Titulo">
-                    <p>Inventario1</p>
+                    <p>Inventario_1</p><br>
                 </div>
-                <div class="EditarTabla">
+                <br><div class="EditarTabla">
                     <div id="inputsTabla">
                         <div class ="Filas">   
                             <div class="tituloFilas">
-                                <p>Filas:</p>
+                                <br><p>Filas: 1</p>
                             </div>
                             <div class="editarFilas">
-                                <input  min="1" max="Infinity" type="number" value="1">
+                                
                             </div>
                         </div>  
                     </div>
@@ -92,7 +87,7 @@
                         </div>                        
                     </div>
                 </div>
-                <div class="Tabla" style="overflow: scroll;">
+                <br><div class="Tabla" style="overflow: scroll;">
                     <table class="table  table-bordered">
                         <thead class="table-dark">
                         <tr>
@@ -115,7 +110,7 @@
             </div>
 
         </section>
-    </v-app>    
+    </main>    
 </template>
 
 

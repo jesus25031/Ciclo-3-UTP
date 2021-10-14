@@ -32,8 +32,6 @@
 </template>
 
 <script>
-    import "../../Css/login/Body.css"
-    import "../../Css/login/Cajon_Contenido.css"
     import axios from "axios";
     
     export default {
@@ -112,3 +110,7 @@
     }
 
 </script> 
+<style scoped>
+    @import "../../Css/login/Body_login.css";
+    @import "../../Css/login/Cajon_Contenido_login.css";
+</style>

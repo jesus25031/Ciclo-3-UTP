@@ -1,7 +1,7 @@
 <template>
-  <v-app class="body">
-     <header >
-        <div class = "encabezado"  >
+  <main>
+     <header>
+        <div class = "encabezado-adm"  >
             <div class = "encabezado_logo">
                 <img class = "imagen_logo" src="../../Recursos/Logo.png">
             </div>
@@ -15,11 +15,6 @@
                      <router-link to="/admin/compartir">Compartir</router-link>
                 </div>  
             </div>
-            <div class = "encabezado_botones_VistaOperario">
-                <div class = "boton_vistaOperario">
-                     <router-link to="/admin/vistaOperario">Vista Operario</router-link>
-                </div> 
-            </div>
             <div class = "encabezado_botones_Actividad">
                 <div class = "boton_actividad">
                      <router-link to="/admin/actividad">Actividad</router-link>
@@ -32,11 +27,11 @@
             </div>            
         </div>
     </header> 
-    <section class="Container" >
-            <div class="Seccion-Carpetas"> 
+    <section class="container-adma" >
+            <div class="seccion-Carpetas"> 
             <div class="cajon-carpetas">
                 <div class="inventarios-titulo">
-                    <p>INVENTARIOS</p>
+                    <p>INVENTARIOS</p><br>
                 </div>
 
                      <!-- Carpeta Principal  -->
@@ -66,12 +61,12 @@
             </div>
         </div> 
         <div class="Seccion-Tabla">
-            <div class="Titulo">
-                <p id="nameInventario">Inventario1</p>
+            <div class="Titulo"><br>
+                <p id="nameInventario">Inventario_1</p><br>
             </div>
  
             <div class="Tabla" style="overflow: scroll;">
-               <table class="table  table-bordered"> 
+               <br><table class="table  table-bordered"> 
                     <thead class="table-dark">
                        <tr>
                          <th scope="col"><div class="columna"><p> Fecha</p></div></th>
@@ -92,21 +87,6 @@
                           <th scope="col"><div class="columna"><p></p></div></th>
                         </tr>
                         <tr>
-                           <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                        </tr>
-                        <tr>
-                           <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                          <th scope="col"><div class="columna"><p> </p></div></th>
-                        </tr>
 
                     </tbody>
                 </table> 
@@ -114,7 +94,7 @@
         </div>
 
     </section>
-  </v-app>
+  </main>
 </template>
 
 <script>
@@ -123,13 +103,13 @@
     import '../../Css/administrador-actividad/CajonCarpetas.css';
     import '../../Css/administrador-actividad/Container.css';
     import '../../Css/administrador-actividad/Tabla.css';
-    import axios from "axios";
+    // import axios from "axios";
 
     
 
     export default { 
          created(){
-            this. getoperarioActividad()
+            // this. getoperarioActividad()
         },  
         data() {
             return{
@@ -146,22 +126,22 @@
             }
 
         },
-        methods:{
-                getoperarioActividad(){  
-                    console.log("Cargando datos");
-                    let apiURL = "http://localhost:4000/api/adminActividad/demo";
-                        axios
-                            .get(apiURL)
-                            .then((res => {
-                                this.actividad = res.data;
-                            }))
-                            .catch((error) => {
-                                console.log(error);
-                            });     
+        // methods:{
+        //         getoperarioActividad(){  
+        //             console.log("Cargando datos");
+        //             let apiURL = "https://agile-bastion-32260.herokuapp.com/api/adminActividad/demo";
+        //                 axios
+        //                     .get(apiURL)
+        //                     .then((res => {
+        //                         this.actividad = res.data;
+        //                     }))
+        //                     .catch((error) => {
+        //                         console.log(error);
+        //                     });     
                 
-                },
+        //         },
              
-        }
+        // }
     }
 
         

@@ -1,6 +1,15 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
     
+
+//inventario
+//fecha
+//hora
+//operario
+//producto
+//cantidad
+//total
+
 let actividadSchema = new Schema(
     {
         user:{

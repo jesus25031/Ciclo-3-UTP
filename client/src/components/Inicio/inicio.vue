@@ -7,7 +7,7 @@
                 </div>
                 <div class = "encabezado_botones_Inicio">
             <div class = "boton_inicio">
-                <router-link to="/">Inicio</router-link>
+                <router-link to="/">Inicio</router-link> 
             </div>
             </div>
             <div class = "encabezado_botones_Servicio" >
@@ -135,10 +135,6 @@
 </template>
 
 <script >
-    import "../../Css/Inicio/Estilo.css";
-    import "../../Css/Inicio/Header.css";
-    
-
     export default{
         data(){
             return{
@@ -148,6 +144,8 @@
 
     }
 </script>
-<style>
+<style  scoped>
+    @import "../../Css/Inicio/Estilo_inicio.css";
+    @import "../../Css/Inicio/Header_inicio.css";
 </style>
 

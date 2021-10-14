@@ -99,9 +99,6 @@ Y tambien amante de la programacion, es sorprendente lo <br>que unas lineas de c
 </template>
 
 <script>
-    import "../../Css/grupo/estilosgrupo.css"
-    import "../../Css/grupo/Header.css"
-    import "../../Css/noticias/Footer.css"
 
 export default{
     setup() {
@@ -109,3 +106,8 @@ export default{
     },
 }
 </script>
+<style scoped>
+    @import "../../Css/grupo/estilos_grupo.css";
+    @import "../../Css/grupo/Header_grupo.css";
+    @import "../../Css/noticias/Footer_new.css";
+</style>

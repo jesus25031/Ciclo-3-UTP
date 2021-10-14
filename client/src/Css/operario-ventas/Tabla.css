@@ -1,17 +1,19 @@
 .Seccion-Tabla{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 50px 92%;
+    grid-template-rows: 50px 400px;
     grid-column-gap: 0px;
     grid-row-gap: 10px;
+    margin-right: 35px;
+    padding-left: 10%;
 }
 
 
 .Titulo{
     grid-area: 1 / 1 / 2 / 2;
     display: table;
-    margin-right: 10px;
     border-bottom: 2px solid black;
+    width: 100%;
 }
 .Titulo > p{
     display: table-cell;
@@ -37,12 +39,17 @@
 
 .inputs{
     grid-area: 1 / 1 / 2 / 2;
-
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 33% 33% 33%;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+}
+
+button, input, select, textarea{
+    background-color: #c0e5eb !important;
+    border-style: 1px black !important;
+    border-radius: 10px !important;
 }
 
 #producto{

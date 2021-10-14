@@ -108,11 +108,6 @@
 </template>
 
 <script>
-    import "../../Css/noticias/Body.css"
-    import "../../Css/noticias/Footer.css"
-    import "../../Css/noticias/Header.css"
-    import "../../Css/noticias/SeccionNoticias.css"
-
 export default{
     setup() {
         
@@ -134,3 +129,11 @@ export default{
     },
 }
 </script>
+
+<style scoped>
+    @import "../../Css/noticias/Body_new.css";
+    @import "../../Css/noticias/Footer_new.css";
+    @import "../../Css/noticias/Header_new.css";
+    @import "../../Css/noticias/SeccionNoticias.css";
+
+</style>

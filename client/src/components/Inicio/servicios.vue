@@ -111,13 +111,14 @@
 
 
 <script>
-    import "../../Css/Servicios/Header.css"
-    import "../../Css/Servicios/Servicios.css"
-
   export default {
 
   }
 
 </script>
+<style scoped>
+    @import "../../Css/Servicios/Header_serv.css";
+    @import "../../Css/Servicios/Servicios.css";
 
+</style>
 

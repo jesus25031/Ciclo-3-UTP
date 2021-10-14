@@ -4,6 +4,8 @@
     grid-template-rows: 50px 100px 81%;
     grid-column-gap: 0px;
     grid-row-gap: 10px;
+    margin-right: 35px;
+    padding-left: 10%;
 }
 
 
@@ -11,6 +13,7 @@
     grid-area: 1 / 1 / 2 / 2;
     display: table;
     border-bottom: 2px solid black;
+    width: 100%;
 }
 .Titulo > p{
     display: table-cell;
@@ -38,7 +41,7 @@
 .Filas{
     width: 100%;
     display: grid;
-    grid-template-columns: 7% 93%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 100%;
     grid-column-gap: 0px;
     grid-row-gap: 0px;

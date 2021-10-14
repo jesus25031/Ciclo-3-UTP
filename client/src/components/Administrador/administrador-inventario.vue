@@ -1,7 +1,7 @@
 <template>
-  <v-app class="body">
+  <main>
      <header >
-        <div class = "encabezado"  >
+        <div class = "encabezado-adm"  >
             <div class = "encabezado_logo">
                 <img class = "imagen_logo" src="../../Recursos/Logo.png">
             </div>
@@ -15,11 +15,7 @@
                      <router-link to="/admin/compartir">Compartir</router-link>
                 </div>  
             </div>
-            <div class = "encabezado_botones_VistaOperario">
-                <div class = "boton_vistaOperario">
-                     <router-link to="/admin/vistaOperario">Vista Operario</router-link>
-                </div> 
-            </div>
+
             <div class = "encabezado_botones_Actividad">
                 <div class = "boton_actividad">
                      <router-link to="/admin/actividad">Actividad</router-link>
@@ -32,7 +28,7 @@
             </div>            
         </div>
     </header> 
-    <section class="Container" >
+    <section class="container-inv" >
             <div class="Seccion-Carpetas"> 
             <div class="cajon-carpetas">
                 <div class="inventarios-titulo">
@@ -58,7 +54,7 @@
                             <path d="M13.5 10a.5.5 0 0 1 .5.5V12h1.5a.5.5 0 1 1 0 1H14v1.5a.5.5 0 1 1-1 0V13h-1.5a.5.5 0 0 1 0-1H13v-1.5a.5.5 0 0 1 .5-.5z"/>
                           </svg>
                     </div>
-                    <div id="newFile" type="button">
+                    <div id="newFile" type="button" style="display:none">
                         <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-plus" viewBox="0 0 16 16">
                             <path d="M8 6.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V11a.5.5 0 0 1-1 0V9.5H6a.5.5 0 0 1 0-1h1.5V7a.5.5 0 0 1 .5-.5z"/>
                             <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5L14 4.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5h-2z"/>
@@ -78,26 +74,26 @@
                 </div>
             </div>
         </div> 
-        <div class="Seccion-Tabla">
+        <div class="seccion-Tabla">
             <div class="Titulo">
-                <p id="nameInventario">Inventario1</p>
+                <p id="nameInventario">Inventario_1</p><br>
             </div>
-            <div class="EditarTabla">
+            <br><div class="EditarTabla">
                 <div id="inputsTabla">
                     <div class="Columnas">
                         <div class="tituloColumnas">
-                            <p>Columnas:</p>
+                            <p>Columnas: 4</p>
                         </div>
                         <div class="editarColumnas">
-                               <input  min="4" max="Infinity" type="number" value="4">
+
                         </div> 
                     </div>
                     <div class ="Filas">   
                         <div class="tituloFilas">
-                            <p>Filas:</p>
+                            <p> Filas: 6 </p>
                         </div>
                         <div class="editarFilas">
-                            <input  min="2" max="Infinity" type="number" value="3">
+
                         </div>     
                     </div>
                     
@@ -106,7 +102,7 @@
                     <div class="botonGuardar">
                          <v-btn 
                                 color="info"
-                                v-on:click="prepararDatos(), actualizarAdminInventario()">Guardar
+                                v-on:click="actualizarAdminInventario()">Guardar
                          </v-btn>
                     </div>                        
                 </div>
@@ -115,30 +111,48 @@
                <table class="table  table-bordered"> 
                     <thead class="table-dark">
                        <tr>
-                        <th scope="col"><input class="inputEncabezado" id="col-1 row-1" type="text" :value="admin_inventarios.tabla.columnas_1.filas_1"></th>
-                        <th scope="col"><input class="inputEncabezado" id="col-2 row-1" type="text" :value="admin_inventarios.tabla.columnas_2.filas_1"></th>
-                        <th scope="col"><input class="inputEncabezado" id="col-3 row-1" type="text" :value="admin_inventarios.tabla.columnas_3.filas_1"></th>
-                        <th scope="col"><input class="inputEncabezado" id="col-4 row-1" type="text" :value="admin_inventarios.tabla.columnas_4.filas_1"></th>
+                        <th scope="col"><p>Producto</p></th>
+                        <th scope="col"><p>Precio Unidad</p></th>
+                        <th scope="col"><p>Cantidad en Stock</p></th>
+                        <th scope="col"><p>Ubicación </p></th>
                       </tr>
                     </thead>
                     <tbody>
                         <tr>
-                          <th scope="col"><input class="inputContenido" id="col-1 row-2" type="text" :value="admin_inventarios.tabla.columnas_1.filas_2" ></th>
-                          <th scope="col"><input class="inputContenido" id="col-2 row-2" type="text" :value="admin_inventarios.tabla.columnas_2.filas_2"></th>
-                          <th scope="col"><input class="inputContenido" id="col-3 row-2" type="text" :value="admin_inventarios.tabla.columnas_3.filas_2"></th>
-                          <th scope="col"><input class="inputContenido" id="col-4 row-2" type="text" :value="admin_inventarios.tabla.columnas_4.filas_2"></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_1.filas_2" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_2.filas_2" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_3.filas_2" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_4.filas_2" ></th>
                         </tr>
                         <tr>
-                            <th scope="col"><input class="inputContenido" id="col-1 row-3" type="text" :value="admin_inventarios.tabla.columnas_1.filas_3"></th>
-                            <th scope="col"><input class="inputContenido" id="col-2 row-3" type="text" :value="admin_inventarios.tabla.columnas_2.filas_3"></th>
-                            <th scope="col"><input class="inputContenido" id="col-3 row-3" type="text" :value="admin_inventarios.tabla.columnas_3.filas_3"></th>
-                            <th scope="col"><input class="inputContenido" id="col-4 row-3" type="text" :value="admin_inventarios.tabla.columnas_4.filas_3"></th>
+                            <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_1.filas_3" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_2.filas_3" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_3.filas_3" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_4.filas_3" ></th>
                         </tr>
                         <tr>
-                            <th scope="col"><input class="inputContenido" id="col-1 row-4" type="text" :value="admin_inventarios.tabla.columnas_1.filas_4"></th>
-                            <th scope="col"><input class="inputContenido" id="col-2 row-4" type="text" :value="admin_inventarios.tabla.columnas_2.filas_4"></th>
-                            <th scope="col"><input class="inputContenido" id="col-3 row-4" type="text" :value="admin_inventarios.tabla.columnas_3.filas_4"></th>
-                            <th scope="col"><input class="inputContenido" id="col-4 row-4" type="text" :value="admin_inventarios.tabla.columnas_4.filas_4"></th>
+                         <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_1.filas_4" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_2.filas_4" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_3.filas_4" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_4.filas_4" ></th>
+                        </tr>
+                        <tr>
+                            <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_1.filas_5" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_2.filas_5" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_3.filas_5" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_4.filas_5" ></th>
+                        </tr>
+                        <tr>
+                             <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_1.filas_6" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_2.filas_6" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_3.filas_6" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_4.filas_6" ></th>
+                        </tr>
+                        <tr>
+                                 <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_1.filas_7" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_2.filas_7" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_3.filas_7" ></th>
+                          <th scope="col"><input class="inputContenido" type="text" v-model="admin_inventarios.tabla.columnas_4.filas_7" ></th>
                         </tr>
                     </tbody>
                 </table> 
@@ -146,7 +160,7 @@
         </div>
 
     </section>
-  </v-app>
+  </main>
 </template>
 
 <script>
@@ -171,13 +185,13 @@
                     archivo_name: "",
                     tabla: {
                             columnas_1:
-                                {filas_1:" Columna 1", filas_2:" ", filas_3:" "},
+                                {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "},
                             columnas_2:
-                                {filas_1:" Columna 2", filas_2:"", filas_3:" "},
+                                {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "},
                             columnas_3:
-                                {filas_1:" Columna 3", filas_2:" ", filas_3:" "},
+                                {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "},
                             columnas_4:
-                                {filas_1:" Columna 4", filas_2:" ", filas_3:" "}}
+                                {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "}}
 
                 }, 
             };
@@ -187,15 +201,16 @@
             //Crear inventario             
             crearAdminInventario(){
                 this.admin_inventarios.archivo_name = document.getElementById("nameInventario").textContent;
-                let apiURL = "http://localhost:4000/api/create-adminInventario";
+                let apiURL = "https://agile-bastion-32260.herokuapp.com/api/create-adminInventario";
                 axios
                     .post(apiURL, this.admin_inventarios)
+                    console.log("creado")
             },
 
             // Obtener datos de usuario 
             getAdminInfo(){  
                 console.log("Cargando datos");
-                let apiURL = "http://localhost:4000/api/adminInventario/" + "demo";
+                let apiURL = "https://agile-bastion-32260.herokuapp.com/api/adminInventario/" + "demo";
                     axios
                         .get(apiURL)
                         .then((res) => {
@@ -209,7 +224,7 @@
             //Actualizar Inventario
             actualizarAdminInventario() {
                 let query = this.admin_inventarios.user;
-                let apiURL = 'http://localhost:4000/api/update-admin-Inventario/' + query;
+                let apiURL = 'https://agile-bastion-32260.herokuapp.com/api/update-admin-Inventario/' + query;
                     
                     axios
                         .put(apiURL, this.admin_inventarios)
@@ -221,35 +236,10 @@
 
                         // });
             },
-
-            
-            prepararDatos(){
-                this.admin_inventarios.archivo_name = document.getElementById("nameInventario").textContent;
-                this.admin_inventarios.user = "demo"
-                // Fila 1 Encabezado
-                this.admin_inventarios.tabla.columnas_1.filas_1 = document.getElementById("col-1 row-1").value;
-                this.admin_inventarios.tabla.columnas_2.filas_1 = document.getElementById("col-2 row-1").value;
-                this.admin_inventarios.tabla.columnas_3.filas_1 = document.getElementById("col-3 row-1").value;
-                this.admin_inventarios.tabla.columnas_4.filas_1 = document.getElementById("col-4 row-1").value;
-
-                // Fila 2
-                this.admin_inventarios.tabla.columnas_1.filas_2 = document.getElementById("col-1 row-2").value;
-                this.admin_inventarios.tabla.columnas_2.filas_2 = document.getElementById("col-2 row-2").value;
-                this.admin_inventarios.tabla.columnas_3.filas_2 = document.getElementById("col-3 row-2").value;
-                this.admin_inventarios.tabla.columnas_4.filas_2 = document.getElementById("col-4 row-2").value;
-
-                // Fila 3
-                this.admin_inventarios.tabla.columnas_1.filas_3 = document.getElementById("col-1 row-3").value;
-                this.admin_inventarios.tabla.columnas_2.filas_3 = document.getElementById("col-2 row-3").value;
-                this.admin_inventarios.tabla.columnas_3.filas_3 = document.getElementById("col-3 row-3").value;
-                this.admin_inventarios.tabla.columnas_4.filas_3 = document.getElementById("col-4 row-3").value;
-
-            },
-            
             //Eliminar Inventario
              deleteAdminInventario() {
                 let query = "demo"
-                let apiURL = 'http://localhost:4000/api/delete-adminInventario/' + query;
+                let apiURL = 'https://agile-bastion-32260.herokuapp.com/api/delete-adminInventario/' + query;
                     axios
                         .delete(apiURL)
                         // .then(() => {

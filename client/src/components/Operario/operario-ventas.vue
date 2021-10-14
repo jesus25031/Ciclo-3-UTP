@@ -22,8 +22,8 @@
                 </div>            
             </div>
         </header> 
-        <section class="Container">
-            <div class="Seccion-Carpetas">
+        <section class="container-ven">
+            <div class="seccion-Carpetas">
                 <div class="cajon-carpetas">
                     <div class="inventarios-titulo">
                         <p>INVENTARIOS </p>
@@ -59,7 +59,7 @@
                     <div class="ventana_interaccion">
                         <div class="inputs">
                             <datalist id="name_productos">
-                                    <option :value="tabla.columnas_1.filas_2"></option>
+                                    <option></option>
                                     <!-- <option value="Amarillo"></option>
                                     <option value="Burdeos"></option>
                                     <option value="Caoba"></option>
@@ -86,7 +86,7 @@
                         </div>
                         <div class="buttons">
                             <div>
-                                <v-btn id="vender" color="success" @click="prepararDatos()">Vender</v-btn>
+                                <v-btn id="vender" color="success" @click="actualizarAdminInventario()">Vender</v-btn>
                                 <v-btn id="cancelar" color="error" @click="btn_cancelar()">Cancelar</v-btn>
                             </div>
                         </div>
@@ -121,30 +121,31 @@
                 ubicacion: "",
                 total: 0,
                 tabla: {
-                            columnas_1:
-                                {filas_1:" Columna 1", filas_2:" ", filas_3:" "},
-                            columnas_2:
-                                {filas_1:" Columna 2", filas_2:"", filas_3:" "},
-                            columnas_3:
-                                {filas_1:" Columna 3", filas_2:" ", filas_3:" "},
-                            columnas_4:
-                                {filas_1:" Columna 4", filas_2:" ", filas_3:" "}},
+                        columnas_1:
+                            {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "},
+                        columnas_2:
+                            {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "},
+                        columnas_3:
+                            {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "},
+                        columnas_4:
+                            {filas_1:" Columna 1", filas_2:" ", filas_3:" ", filas_4:" ", filas_5:" ", filas_6:" ", filas_7:" "}
+
+                }, 
             
                 actividad:{
-                        user: "demo",
-                        Fecha: {filas_2: "", filas_3: "", fila_4: ""},
-                        Hora: {filas_2: "", filas_3: "", fila_4: ""},
+                        Fecha: "",
+                        Hora: "",
                         Operario:"demo-Operario",
-                        Producto: {filas_2: "", filas_3: "", fila_4: ""},
-                        Cantidad: {filas_2: "", filas_3: "", fila_4: ""},
-                        Total: {filas_2: "", filas_3: "", fila_4: ""},
+                        Producto: "",
+                        Cantidad: "",
+                        Total: ""
                 },
             }
         },
         methods:{
              getAdminInfo(){  
                 console.log("Cargando datos");
-                let apiURL = "http://localhost:4000/api/adminInventario/" + "demo";
+                let apiURL = "https://agile-bastion-32260.herokuapp.com/api/adminInventario/" + "demo";
                     axios
                         .get(apiURL)
                         .then((res) => {
@@ -171,6 +172,7 @@
             btn_cancelar(){
                 document.getElementById("input_cantidad").value = "";
                 document.getElementById("input_producto").value = "";
+                this.producto = "";
                 this.p_unidad = "";
                 this.c_stock = "";
                 this.ubicacion = "";
@@ -193,7 +195,7 @@
             },
             
             crear_actividad(){
-                let apiURL = "http://localhost:4000/api/create-adminActividad";
+                let apiURL = "https://agile-bastion-32260.herokuapp.com/api/create-adminActividad";
                 axios
                     .post(apiURL, this.actividad)
 
@@ -205,21 +207,35 @@
                 this.total = "";
             },
 
-            actualizar_inventario(){
-                let apiURL = 'http://localhost:4000/api/update-admin-Inventario/' + "demo";
-                    axios
-                        .put(apiURL, this.actividad)
+            actualizarAdminInventario() {
+                    for( let columnas in  this.tabla){
+                        
+                        for( let filas in  this.tabla[columnas]){
 
-                document.getElementById("input_cantidad").value = "";
-                document.getElementById("input_producto").value = "";
-                this.p_unidad = "";
-                this.c_stock = "";
-                this.ubicacion = "";
-                this.total = "";
+                            if( this.tabla[columnas][filas] == this.producto){
+                                console.log("producto = " +  this.tabla[columnas][filas])
+                            }
+                        }
+                
+                    }
+                
+                
+                // let apiURL = 'https://agile-bastion-32260.herokuapp.com/api/update-admin-Inventario/demo';
+                    
+                //     axios
+                //         .put(apiURL, this.admin_inventarios)
+
+                // document.getElementById("input_cantidad").value = "";
+                // document.getElementById("input_producto").value = "";
+                // this.producto = "";
+                // this.p_unidad = "";
+                // this.c_stock = "";
+                // this.ubicacion = "";
+                // this.total = "";
             },
              deleteAdminActividad() {
                 let query = "demo"
-                let apiURL = 'http://localhost:4000/api/delete-adminActividad/' + query;
+                let apiURL = 'https://agile-bastion-32260.herokuapp.com/api/delete-adminActividad/' + query;
                     axios
                         .delete(apiURL)
                         console.log("eliminando1")

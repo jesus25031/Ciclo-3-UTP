@@ -1,5 +1,5 @@
 <template>
-    <v-app class="body">
+    <main>
         <header >
             <div class = "encabezado">
                 <div class = "encabezado_logo">
@@ -22,8 +22,8 @@
                 </div>              
             </div>
         </header> 
-        <section class="Container">
-            <div class="Seccion-Carpetas">
+        <section class="container-cons">
+            <div class="seccion-Carpetas">
                 <div class="cajon-carpetas">
                     <div class="inventarios-titulo">
                         <P>INVENTARIOS </P>
@@ -45,7 +45,7 @@
 
                     <!-- Contenido de la carpeta -->
                     <div class="contenido-inventario" type="button">
-                        <a v-on:click="getAdminInfo()"> inventario1-bs</a>
+                        <a v-on:click="getAdminInfo()"> inventario1-bs</a><br>
                         <div id="openFile">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-ruled" viewBox="0 0 16 16">
                                 <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h7v1a1 1 0 0 1-1 1H6zm7-3H6v-2h7v2z"/>
@@ -58,29 +58,53 @@
                 <div class="Titulo">
                     <p>Inventario1</p>
                 </div>
-                <div class="Tabla" style="overflow: scroll;">
+                <br><div class="Tabla" style="overflow: scroll;">
                     <table class="table  table-bordered">
                         <thead class="table-dark">
                         <tr>
-                            <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_1.filas_1"></p></div></th>
-                            <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_2.filas_1"></p></div></th>
-                            <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_3.filas_1"></p></div></th>
-                            <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_4.filas_1"></p></div></th>
+                            <th scope="col"><p>Producto</p></th>
+                        <th scope="col"><p>Precio Unidad</p></th>
+                        <th scope="col"><p>Cantidad en Stock</p></th>
+                        <th scope="col"><p>Ubicación </p></th>
                         </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_1.filas_2"></p></div></th>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_2.filas_2"></p></div></th>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_3.filas_2"></p></div></th>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_4.filas_2"></p></div></th>
-                            </tr>
-                            <tr>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_1.filas_3"></p></div></th>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_2.filas_3"></p></div></th>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_3.filas_3"></p></div></th>
-                                <th scope="col"><div class="columna"><p v-text="admin_inventarios.tabla.columnas_4.filas_3"></p></div></th>
-                            </tr>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_1.filas_2}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_2.filas_2}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_3.filas_2}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_4.filas_2}}</p></th>
+                        </tr>
+                        <tr>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_1.filas_3}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_2.filas_3}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_3.filas_3}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_4.filas_3}}</p></th>
+                        </tr>
+                        <tr>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_1.filas_4}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_2.filas_4}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_3.filas_4}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_4.filas_4}}</p></th>
+                        </tr>
+                        <tr>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_1.filas_5}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_2.filas_5}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_3.filas_5}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_4.filas_5}}</p></th>
+                        </tr>
+                        <tr>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_1.filas_6}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_2.filas_6}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_3.filas_6}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_4.filas_6}}</p></th>
+                        </tr>
+                        <tr>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_1.filas_7}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_2.filas_7}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_3.filas_7}}</p></th>
+                                <th scope="col"><p>{{admin_inventarios.tabla.columnas_4.filas_7}}</p></th>
+                        </tr>
 
                         </tbody>
                     </table>
@@ -88,7 +112,7 @@
             </div>
 
         </section>
-    </v-app>
+    </main>
 </template>
 
 <script>
@@ -126,7 +150,7 @@
         methods:{
                 getAdminInfo(){  
                     console.log("Cargando datos");
-                    let apiURL = "http://localhost:4000/api/adminInventario/" + "demo";
+                    let apiURL = "https://agile-bastion-32260.herokuapp.com/api/adminInventario/" + "demo";
                         axios
                             .get(apiURL)
                             .then((res => {

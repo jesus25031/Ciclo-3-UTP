@@ -44,9 +44,6 @@
 
 <script>
 
-    import "../../Css/login-recuperarContr/Body.css"
-    import "../../Css/login-recuperarContr/Cajon_Contenido.css"
-
     export default {
 
     
@@ -58,3 +55,8 @@
         // },
     }
 </script>
+
+<style scoped>
+    @import "../../Css/login-recuperarContr/Body_login_rec.css";
+    @import "../../Css/login-recuperarContr/Body_login_rec.css";
+</style>

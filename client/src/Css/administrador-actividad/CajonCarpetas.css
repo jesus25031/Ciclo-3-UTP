@@ -101,7 +101,7 @@
     height: 25px;
     color: black;
     font-size: 18px;
-    background-color: rgb(161, 161, 161);
+    background-color: rgba(252, 2, 2, 0.288);
     display: grid;
     grid-template-columns: 10% 90%;
     grid-template-rows: 100%;
@@ -123,6 +123,6 @@
     border-left: 1px solid black;
 }
 .contenido-inventario:hover{
-    background-color: rgb(161, 161, 161);
+    background-color: rgba(252, 2, 2, 0.288);
     border-radius: 5px;
 }

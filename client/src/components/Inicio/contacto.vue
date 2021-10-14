@@ -105,17 +105,14 @@
 
 
 <script>
-    import "../../Css/noticias/Footer.css"
-    import "../../Css/contacto/Header.css"
-    import "../../Css/contacto/style.css"
-    
-
-export default {
-    created(){
-            this. getAdminInfo()
-    },    
+export default {  
     setup() {
         
     },
 }
 </script>
+<style scoped>
+    @import "../../Css/noticias/Footer_new.css";
+    @import "../../Css/contacto/Header_cont.css";
+    @import "../../Css/contacto/style_cont.css";
+</style>
