@@ -1,6 +1,6 @@
 
 <template>
-   <main>
+   <v-app class="body">
     <nav >
     <div class = "encabezado">
         <div class = "encabezado_logo">
@@ -105,7 +105,7 @@
       </div>   
     </div>
 </div>
-</main> 
+</v-app> 
 
 </template>
 
@@ -116,9 +116,8 @@
   }
 
 </script>
-<style scoped>
-    @import "../../Css/Servicios/Header_serv.css";
-    @import "../../Css/Servicios/Servicios.css";
 
-</style>
+<style scoped src= '../../Css/Servicios/Header_serv.css'></style>
+<style scoped src= '../../Css/Servicios/Servicios.css'></style>
+
 

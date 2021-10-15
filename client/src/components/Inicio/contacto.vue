@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <v-app class="body">
         <nav >
         <div class = "encabezado">
             <div class = "encabezado_logo">
@@ -38,7 +38,7 @@
         </div>
     </nav>
     <br><div class="card-IMI">
-            <img class="main-imagen" src="../../Recursos/img2.png" style="width:100%">
+            <img class="main-imagen" src="../../Recursos/img2.png">
 
         </div><br>
 		
@@ -100,7 +100,7 @@
            </ul>    
        </footer>
 
-    </main>
+    </v-app>
 </template>
 
 
@@ -111,8 +111,7 @@ export default {
     },
 }
 </script>
-<style scoped>
-    @import "../../Css/noticias/Footer_new.css";
-    @import "../../Css/contacto/Header_cont.css";
-    @import "../../Css/contacto/style_cont.css";
-</style>
+
+<style scoped src= '../../Css/noticias/Footer_new.css'></style>
+<style scoped src= '../../Css/contacto/Header_cont.css'></style>
+<style scoped src= '../../Css/contacto/style_cont.css'></style>

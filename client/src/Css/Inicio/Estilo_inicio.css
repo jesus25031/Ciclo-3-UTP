@@ -1,12 +1,11 @@
-body {
+.body {
     height: 100%;
-    width: auto;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 0px;
+    width: 100%;
     font-family: sans-serif;
-    background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #0d0d3d 75%, #140b3d 100%);    align-items: center;
+    background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #0d0d3d 75%, #140b3d 100%) !important;    
+    align-items: center;
 }
+
 
 .card-IMI{
     background: rgba( 255, 255, 255, 0 );
@@ -22,6 +21,9 @@ body {
     backdrop-filter: blur( 0px );
     -webkit-backdrop-filter: blur( 0px );
     border-radius: 15px;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .box p {

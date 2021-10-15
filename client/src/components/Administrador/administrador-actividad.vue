@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <v-app class="body">
      <header>
         <div class = "encabezado-adm"  >
             <div class = "encabezado_logo">
@@ -78,13 +78,13 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                          <th scope="col"><div class="columna"><p></p></div></th>
-                          <th scope="col"><div class="columna"><p></p></div></th>
-                          <th scope="col"><div class="columna"><p></p></div></th>
-                          <th scope="col"><div class="columna"><p></p></div></th>
-                          <th scope="col"><div class="columna"><p></p></div></th>
-                          <th scope="col"><div class="columna"><p></p></div></th>
+                        <tr v-for="actividad in actividades" :key="actividad.id">
+                          <td scope="col"><div class="columna"><p> {{actividad.Fecha}} </p></div></td>
+                          <td scope="col"><div class="columna"><p>{{actividad.Hora}}</p></div></td>
+                          <td scope="col"><div class="columna"><p>{{actividad.Operario}}</p></div></td>
+                          <td scope="col"><div class="columna"><p>{{actividad.Producto}}</p></div></td>
+                          <td scope="col"><div class="columna"><p>{{actividad.Cantidad}}</p></div></td>
+                          <td scope="col"><div class="columna"><p>{{actividad.Total}}</p></div></td>
                         </tr>
                         <tr>
 
@@ -94,56 +94,51 @@
         </div>
 
     </section>
-  </main>
+  </v-app>
 </template>
 
 <script>
-    import '../../Css/administrador-actividad/Body.css';
-    import '../../Css/administrador-actividad/Header.css';
-    import '../../Css/administrador-actividad/CajonCarpetas.css';
-    import '../../Css/administrador-actividad/Container.css';
-    import '../../Css/administrador-actividad/Tabla.css';
-    // import axios from "axios";
+    import axios from "axios";
 
     
 
     export default { 
          created(){
-            // this. getoperarioActividad()
+            this. getoperarioActividad()
         },  
         data() {
             return{
-                actividad:{
-                        user: "demo",
-                        Fecha: {filas_2: "", filas_3: "", fila_4: ""},
-                        Hora: {filas_2: "", filas_3: "", fila_4: ""},
-                        Operario:"demo-Operario",
-                        Producto: {filas_2: "", filas_3: "", fila_4: ""},
-                        Cantidad: {filas_2: "", filas_3: "", fila_4: ""},
-                        Total: {filas_2: "", filas_3: "", fila_4: ""},
-                }
-
+                actividades: []
+                
             }
 
         },
-        // methods:{
-        //         getoperarioActividad(){  
-        //             console.log("Cargando datos");
-        //             let apiURL = "https://agile-bastion-32260.herokuapp.com/api/adminActividad/demo";
-        //                 axios
-        //                     .get(apiURL)
-        //                     .then((res => {
-        //                         this.actividad = res.data;
-        //                     }))
-        //                     .catch((error) => {
-        //                         console.log(error);
-        //                     });     
+
+        methods:{
+                getoperarioActividad(){  
+                    console.log("Cargando datos");
+                    let apiURL = "https://agile-bastion-32260.herokuapp.com/api/actividades/demo";
+                        axios
+                            .get(apiURL)
+                            .then((res => {
+                                this.actividades = res.data;
+                                console.log(this.actividades.Producto)
+                            }))
+                            .catch((error) => {
+                                console.log(error);
+                            });     
                 
-        //         },
+                },
              
-        // }
+        }
     }
 
         
 
-</script> 
+</script>
+
+<style scoped src= '../../Css/administrador-actividad/Body.css'></style>
+<style scoped src= '../../Css/administrador-actividad/Header.css'></style>
+<style scoped src= '../../Css/administrador-actividad/CajonCarpetas.css'></style>
+<style scoped src= '../../Css/administrador-actividad/Container.css'></style>
+<style scoped src= '../../Css/administrador-actividad/Tabla.css'></style>

@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <v-app class="body">
         <nav >
         <div class = "encabezado">
             <div class = "encabezado_logo">
@@ -95,7 +95,7 @@ Y tambien amante de la programacion, es sorprendente lo <br>que unas lineas de c
 	
 </div>	
 
-    </main>
+    </v-app>
 </template>
 
 <script>
@@ -106,8 +106,7 @@ export default{
     },
 }
 </script>
-<style scoped>
-    @import "../../Css/grupo/estilos_grupo.css";
-    @import "../../Css/grupo/Header_grupo.css";
-    @import "../../Css/noticias/Footer_new.css";
-</style>
+
+<style scoped src= '../../Css/grupo/estilos_grupo.css'></style>
+<style scoped src= '../../Css/grupo/Header_grupo.css'></style>
+<style scoped src= '../../Css/noticias/Footer_new.css'></style>

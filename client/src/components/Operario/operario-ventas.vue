@@ -58,18 +58,10 @@
                     </div>
                     <div class="ventana_interaccion">
                         <div class="inputs">
-                            <datalist id="name_productos">
-                                    <option></option>
-                                    <!-- <option value="Amarillo"></option>
-                                    <option value="Burdeos"></option>
-                                    <option value="Caoba"></option>
-                                    <option value="Marrón"></option>
-                                    <option value="Naranja"></option>
-                                    <option value="Verde"></option> -->
-                            </datalist>
+                            <datalist id="name_productos"></datalist>
                              <div id="producto"><input id="input_producto" list="name_productos" 
                                                 type="text" placeholder=" Producto"  
-                                                v-on:change="setItems()">
+                                                v-on:change="setItems()" @click="lista()">
                             </div>
                              <div id="cantidad"><input id="input_cantidad" type="number" 
                                                 placeholder=" Cantidad"
@@ -86,7 +78,7 @@
                         </div>
                         <div class="buttons">
                             <div>
-                                <v-btn id="vender" color="success" @click="actualizarAdminInventario()">Vender</v-btn>
+                                <v-btn id="vender" color="success" @click="crear_actividad(), actualizarAdminInventario()">Vender</v-btn>
                                 <v-btn id="cancelar" color="error" @click="btn_cancelar()">Cancelar</v-btn>
                             </div>
                         </div>
@@ -98,11 +90,6 @@
 </template>
 
 <script>
-    import '../../Css/operario-ventas/Body.css'
-    import '../../Css/operario-ventas/Header.css'
-    import '../../Css/operario-ventas/CajonCarpetas.css'
-    import '../../Css/operario-ventas/Container.css'
-    import '../../Css/operario-ventas/Tabla.css'
     import axios from "axios";
 
    
@@ -111,10 +98,12 @@
         
         created(){
             this.getAdminInfo()
+            
         },
         data(){
            
             return{
+                lista_productos : [],
                 producto: "",
                 p_unidad: "",
                 c_stock: "",
@@ -133,9 +122,10 @@
                 }, 
             
                 actividad:{
+                        user: "demo",
                         Fecha: "",
                         Hora: "",
-                        Operario:"demo-Operario",
+                        Operario: "demo-Operario",
                         Producto: "",
                         Cantidad: "",
                         Total: ""
@@ -153,15 +143,32 @@
                         })
                         .catch((error) => {
                             console.log(error);
-                        });     
+                        });      
+                    
             },
+            lista(){
+                 for( let filas in  this.tabla.columnas_1){
+                    if(this.tabla.columnas_1[filas] != " Columna 1"){
+                        this.lista_productos.push(this.tabla.columnas_1[filas])
+                    }
+                    
+                }  
+
+                 for( let elem in this.lista_productos){
+                    let option = document.createElement("option");
+                    option.value = this.lista_productos[elem];    
+                    console.log(this.lista_productos[elem])             
+                    document.getElementById("name_productos").append(option);
+                }      
+            },
+    
             setItems(){
                 let text = document.getElementById("input_producto").value;
                 this.producto = text;
 
                 for( let filas in  this.tabla.columnas_1){
 
-                    if( this.tabla.columnas_1[filas] == this.producto){
+                    if( (this.tabla.columnas_1[filas]) == this.producto){
                         this.p_unidad= this.tabla.columnas_2[filas],
                         this.c_stock= this.tabla.columnas_3[filas],
                         this.ubicacion= this.tabla.columnas_4[filas]
@@ -185,8 +192,7 @@
                 this.total = "";
             },
 
-
-            prepararDatos(){
+            crear_actividad(){
                 let hoy = new Date();
                 var fecha = hoy.getFullYear() + "-"  + ( hoy.getMonth() + 1 ) + "-" + hoy.getDate();
                 var hora = hoy.getHours() + ':' + hoy.getMinutes();
@@ -197,10 +203,8 @@
                 this.actividad.Producto = this.producto,
                 this.actividad.Cantidad = cant,
                 this.actividad.Total = this.total
-
-            },
-            
-            crear_actividad(){
+                console.log(this.actividad.Total + " tipo:" + typeof(this.actividad.Total))
+                console.log(this.total + " tipo:" + typeof(this.total))
                 let apiURL = "https://agile-bastion-32260.herokuapp.com/api/create-adminActividad";
                 axios
                     .post(apiURL, this.actividad)
@@ -222,7 +226,7 @@
                     }
                 }
                 
-                let apiURL = 'https://agile-bastion-32260.herokuapp.com/apiupdate-cantidad-Inventario/demo/';
+                let apiURL = 'https://agile-bastion-32260.herokuapp.com/api/update-cantidad-Inventario/demo/';
                     
                     axios
                         .put(apiURL, this.tabla)
@@ -243,3 +247,9 @@
         
 
 </script> 
+
+<style scoped src= '../../Css/operario-ventas/Body.css'></style>
+<style scoped src= '../../Css/operario-ventas/Header.css'></style>
+<style scoped src= '../../Css/operario-ventas/CajonCarpetas.css'></style>
+<style scoped src= '../../Css/operario-ventas/Container.css'></style>
+<style scoped src= '../../Css/operario-ventas/Tabla.css'></style>

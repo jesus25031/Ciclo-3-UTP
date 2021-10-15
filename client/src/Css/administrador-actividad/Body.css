@@ -1,11 +1,9 @@
-body{
+.body{
     
     height: auto;
-    width: auto;
-    margin-top: 0%;
-    padding-top: 0%;
+    width: 100%;
     font-family: sans-serif;
-    background: rgb(124,209,219);
-    background: radial-gradient(circle, rgba(124,209,219,1) 0%, rgba(37,176,224,1) 45%, rgba(160,200,180,1) 100%);
+    background: rgb(124,209,219) !important;
+    background: radial-gradient(circle, rgba(124,209,219,1) 0%, rgba(37,176,224,1) 45%, rgba(160,200,180,1) 100%) !important;
 
 }

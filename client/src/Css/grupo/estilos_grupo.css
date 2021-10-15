@@ -1,12 +1,11 @@
-body {
-    height: 720px;
-    width: 1040px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 0px;
-    font-family: sans-serif;
-    background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #0d0d3d 75%, #140b3d 100%);    align-items: center;
+.body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #0d0d3d 75%, #140b3d 100%) !important;    
+  align-items: center;
 }
+
 
 
 .container {

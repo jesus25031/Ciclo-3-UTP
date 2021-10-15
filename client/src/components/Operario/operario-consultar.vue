@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <v-app class="body">
         <header >
             <div class = "encabezado">
                 <div class = "encabezado_logo">
@@ -112,15 +112,10 @@
             </div>
 
         </section>
-    </main>
+    </v-app>
 </template>
 
 <script>
-    import '../../Css/operario-consultar/Body.css'
-    import '../../Css/operario-consultar/Header.css'
-    import '../../Css/operario-consultar/CajonCarpetas.css'
-    import '../../Css/operario-consultar/Container.css'
-    import '../../Css/operario-consultar/Tabla.css'
     import axios from "axios";
 
     export default {
@@ -168,3 +163,9 @@
         
 
 </script> 
+
+<style scoped src= '../../Css/operario-consultar/Body.css'></style>
+<style scoped src= '../../Css/operario-consultar/Header.css'></style>
+<style scoped src= '../../Css/operario-consultar/CajonCarpetas.css'></style>
+<style scoped src= '../../Css/operario-consultar/Container.css'></style>
+<style scoped src= '../../Css/operario-consultar/Tabla.css'></style>

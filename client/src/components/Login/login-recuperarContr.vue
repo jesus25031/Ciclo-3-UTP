@@ -56,7 +56,5 @@
     }
 </script>
 
-<style scoped>
-    @import "../../Css/login-recuperarContr/Body_login_rec.css";
-    @import "../../Css/login-recuperarContr/Body_login_rec.css";
-</style>
+<style scoped src= '../../Css/login-recuperarContr/Body_login_rec.css'></style>
+<style scoped src= '../../Css/login-recuperarContr/Body_login_rec.css'></style>

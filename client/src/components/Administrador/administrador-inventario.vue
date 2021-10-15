@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <v-app class="body">
      <header >
         <div class = "encabezado-adm"  >
             <div class = "encabezado_logo">
@@ -160,15 +160,10 @@
         </div>
 
     </section>
-  </main>
+  </v-app>
 </template>
 
 <script>
-    import '../../Css/administrador-inventario/Body.css';
-    import '../../Css/administrador-inventario/Header.css';
-    import '../../Css/administrador-inventario/CajonCarpetas.css';
-    import '../../Css/administrador-inventario/Container.css';
-    import '../../Css/administrador-inventario/Tabla.css';
     import axios from "axios";
 
     
@@ -258,3 +253,8 @@
 
 </script> 
 
+<style scoped src= '../../Css/administrador-inventario/Body.css'></style>
+<style scoped src= '../../Css/administrador-inventario/Header.css'></style>
+<style scoped src= '../../Css/administrador-inventario/CajonCarpetas.css'></style>
+<style scoped src= '../../Css/administrador-inventario/Container.css'></style>
+<style scoped src= '../../Css/administrador-inventario/Tabla.css'></style>

@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <v-app class="body">
         <form class="seccion-cajon"> 
                 <div class="logo">
                     <img src="../../Recursos/Logo.png">
@@ -28,7 +28,7 @@
                     
                
         </form>
-    </main>
+    </v-app>
 </template>
 
 <script>
@@ -110,7 +110,6 @@
     }
 
 </script> 
-<style scoped>
-    @import "../../Css/login/Body_login.css";
-    @import "../../Css/login/Cajon_Contenido_login.css";
-</style>
+
+<style scoped src= '../../Css/login/Body_login.css'></style>
+<style scoped src= '../../Css/login/Cajon_Contenido_login.css'></style>

@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <v-app class="body">
         <nav >
         <div class = "encabezado">
             <div class = "encabezado_logo">
@@ -104,7 +104,7 @@
     </div>
          
 
-    </main>
+    </v-app>
 </template>
 
 <script>
@@ -130,10 +130,8 @@ export default{
 }
 </script>
 
-<style scoped>
-    @import "../../Css/noticias/Body_new.css";
-    @import "../../Css/noticias/Footer_new.css";
-    @import "../../Css/noticias/Header_new.css";
-    @import "../../Css/noticias/SeccionNoticias.css";
 
-</style>
+<style scoped src= '../../Css/noticias/Body_new.css'></style>
+<style scoped src= '../../Css/noticias/Footer_new.css'></style>
+<style scoped src= '../../Css/noticias/Header_new.css'></style>
+<style scoped src= '../../Css/noticias/SeccionNoticias.css'></style>

@@ -17,11 +17,11 @@ let actividadSchema = new Schema(
             required: true
         },  
         Fecha:{
-            type: JSON,
+            type: String,
             required: true,
         },
         Hora:{
-            type: JSON,
+            type: String,
             required: true,
         },
         Operario:{
@@ -29,15 +29,15 @@ let actividadSchema = new Schema(
             required: true,
         },
         Producto:{
-            type: JSON,
+            type: String,
             required: true,
         },
         Cantidad:{
-            type: JSON,
+            type: String,
             required: true,
         },
         Total:{
-            type: JSON,
+            type: Number,
             required: true,
         },
 

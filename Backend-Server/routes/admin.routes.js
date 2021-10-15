@@ -41,6 +41,16 @@ adminRoute.route("/adminInventario/demo").get((req, res) => {
         }
     });
 });
+adminRoute.route("/actividades/demo").get((req, res) => {
+    actividadModel.find((error, data) => {
+        if (error) {
+          return next(error);
+        } else {
+            // console.log(error);
+            res.json(data);
+        }
+    });
+});
 
 // adminRoute.route("/adminActividad/demo").get((req, res) => {
 //     let query = { user: "demo"};

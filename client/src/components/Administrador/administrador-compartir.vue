@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <v-app class="body">
         <header >
             <div class = "encabezado-adm">
                 <div class = "encabezado_logo">
@@ -110,17 +110,12 @@
             </div>
 
         </section>
-    </main>    
+    </v-app>    
 </template>
 
 
 
 <script>
-    import '../../Css/administrador-compartir/Body.css'
-    import '../../Css/administrador-compartir/Header.css'
-    import '../../Css/administrador-compartir/CajonCarpetas.css'
-    import '../../Css/administrador-compartir/Container.css'
-    import '../../Css/administrador-compartir/Tabla.css'
     //   import axios from "axios";
 
     export default {
@@ -134,3 +129,9 @@
         
 
 </script> 
+
+<style scoped src= '../../Css/administrador-compartir/Body.css'></style>
+<style scoped src= '../../Css/administrador-compartir/Header.css'></style>
+<style scoped src= '../../Css/administrador-compartir/CajonCarpetas.css'></style>
+<style scoped src= '../../Css/administrador-compartir/Container.css'></style>
+<style scoped src= '../../Css/administrador-compartir/Tabla.css'></style>

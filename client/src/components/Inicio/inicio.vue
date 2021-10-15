@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <v-app class="body">
          <nav class="nav-I">
             <div class = "encabezado">
                 <div class = "encabezado_logo">
@@ -39,7 +39,7 @@
         </nav><br><br>
 
         <div class="card-IMI">
-            <img class="main-imagen" src="../../Recursos/img2.png" style="width:100%">
+            <img class="main-imagen" src="../../Recursos/img2.png">
 
         </div><br>
 
@@ -131,7 +131,7 @@
                 
            </ul>    
        </footer>  
-    </main>
+    </v-app>
 </template>
 
 <script >
@@ -144,8 +144,6 @@
 
     }
 </script>
-<style  scoped>
-    @import "../../Css/Inicio/Estilo_inicio.css";
-    @import "../../Css/Inicio/Header_inicio.css";
-</style>
 
+<style scoped src= '../../Css/Inicio/Estilo_inicio.css'></style>
+<style scoped src= '../../Css/Inicio/Header_inicio.css'></style>
