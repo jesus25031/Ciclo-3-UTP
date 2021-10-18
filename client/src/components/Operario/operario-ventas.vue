@@ -61,7 +61,7 @@
                             <datalist id="name_productos"></datalist>
                              <div id="producto"><input id="input_producto" list="name_productos" 
                                                 type="text" placeholder=" Producto"  
-                                                v-on:change="setItems()" @click="lista()">
+                                                v-on:change="setItems()">
                             </div>
                              <div id="cantidad"><input id="input_cantidad" type="number" 
                                                 placeholder=" Cantidad"
@@ -98,6 +98,7 @@
         
         created(){
             this.getAdminInfo()
+            this.activar_lista()
             
         },
         data(){
@@ -134,7 +135,6 @@
         },
         methods:{
              getAdminInfo(){  
-                console.log("Cargando datos");
                 let apiURL = "https://agile-bastion-32260.herokuapp.com/api/adminInventario/" + "demo";
                     axios
                         .get(apiURL)
@@ -146,6 +146,10 @@
                         });      
                     
             },
+            activar_lista(){
+                setTimeout(this.lista, 1000);
+            },
+
             lista(){
                  for( let filas in  this.tabla.columnas_1){
                     if(this.tabla.columnas_1[filas] != " Columna 1"){
@@ -156,9 +160,9 @@
 
                  for( let elem in this.lista_productos){
                     let option = document.createElement("option");
-                    option.value = this.lista_productos[elem];    
-                    console.log(this.lista_productos[elem])             
+                    option.value = this.lista_productos[elem];          
                     document.getElementById("name_productos").append(option);
+
                 }      
             },
     

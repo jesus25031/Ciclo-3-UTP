@@ -1,21 +1,15 @@
-body {
-    height: 1280px;
-    width: auto;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 0px;
-    font-family: sans-serif;
-    background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #0d0d3d 75%, #140b3d 100%);    align-items: center;
+.v-application {
+    display: flow-root;
 }
-
 .cajon_noticias{
     height: 500px;
-    margin-top: 90px;
+    margin-top: 20px;
     margin-left: 50px;
     margin-right: 50px;
     background:none;
     
 }
+
 .noticias_del_dia{
     text-align: center;
     margin-top: 30px;

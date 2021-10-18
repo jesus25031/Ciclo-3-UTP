@@ -39,6 +39,8 @@
 
 .encabezado {
     margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     display: grid;
     grid-template-columns: 20% repeat(5, 12%) 20%;
     grid-template-rows: 50px;

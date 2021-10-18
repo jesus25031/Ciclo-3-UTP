@@ -37,7 +37,7 @@
         </div>                 
         </div>
     </nav>
-        <div id= "noticias_del_dia" class = "cajon_noticias">
+        <div class = "cajon_noticias">
         <h2  class= "noticias_del_dia">Noticia del día</h2>
         <div class = "content_noticias">
             <div  class = "noticia_1">
@@ -66,40 +66,6 @@
                     </p>
                 </div>
             </div>
-        </div>
-        <div class="Noticias_mes">
-            <div class="div1"> 
-                <p>NOTICIAS DEL MES</p>
-            </div>
-            <br><div class="div2">
-                <a href="#noticias_del_dia">
-                    <img  id = "img_goToSection" src= "../../Recursos/Noticia1.jpg">
-                </a>                
-            </div>
-            <div class="div3"> 
-                <p>Gran Inauguración</p>
-            </div>
-            <div class="div4">
-                <a href="#noticias_del_dia">
-                    <img  id = "img_goToSection" src= "../../Recursos/Noticia1.jpg">
-                </a>                
-            </div>
-            <div class="div5"> 
-                <p>Proximamente</p>
-            </div>
-            <div class="div6">
-                <a href="#noticias_del_dia">
-                    <img  id = "img_goToSection" src= "../../Recursos/Noticia1.jpg">
-                </a>                
-            </div>
-            <div class="div7"> 
-                <p>Proximamente</p>
-            </div>
-            
-            <div class="div8">
-    
-            </div>
-    
         </div>
     </div>
          

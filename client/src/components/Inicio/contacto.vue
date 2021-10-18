@@ -70,14 +70,14 @@
     <div class="col">
       <div class="form-group">
         <label>TELEFONO</label>
-        <input type="text">
+       
       </div>
     </div>
 
     <div class="col">
       <div class="form-group">
         <label>TU MENSAJE</label>
-        <textarea></textarea>
+         <input type="text">
       </div>
     </div>
 

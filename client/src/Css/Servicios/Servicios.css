@@ -1,31 +1,10 @@
 .body {
-  height: 100%;
-  width: 100%;
-  margin-top: 0px;
+  height: 1450px;
+  width: 1360px;
   font-family: 'Poppins', sans-serif;
   background-image: radial-gradient(circle at 18.13% 46.5%, #a03c98 0, #16054b 25%, #10103f 50%, #000018 75%, #000000 100%) !important;
-    
- 
-  
+      
 }
-
-.encabezado{
-    align-items: center;
-    display: flex;
-    height: 50px;
-    justify-content: space-around;
-    position: relative;
-    z-index: 2000;
-    min-width: 1100px;
-}
-
-.encabezado_incio{
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    min-width: 50%;
-}
-
 
 .container-cards {
     position: relative;
